@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags 
+  -->
+  <title>HappyPrinting</title>
+  <meta name="title" content="happyprinting">
+  <meta name="description" content="HappyPrinting, rumahnya kebahagiaan 
+  dalam setiap cetakan undangan pernikahan.">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    .slider-container {
+    overflow: hidden;
+    width: 100%; /* Pastikan slider mengambil lebar penuh dari kontainernya */
+}
+
+.slider {
+    display: flex;
+    padding: 0;
+    transition: transform 0.5s ease;
+    list-style: none;
+    margin: 0; /* Hapus margin default */
+    width: 100%; /* Pastikan slider mengambil lebar penuh */
+}
+
+.slider-item {
+    flex: 0 0 100%; /* Setiap slide mengambil lebar penuh */
+}
+
+.img-holder {
+    margin: 0;
+    overflow: hidden;
+}
+
+.img-cover {
+    display: block;
+    width: 100%; /* Jadikan gambar responsif */
+    height: auto;
+}
+
+  </style>
+
+ 
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  
+  <link rel="preload" as="image" href="./assets/images/hero-slide-5.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-6.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-7.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-8.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-9.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-11.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-12.jpg">
+ 
+
+</head>
+
+
+
+<body>
+
+  <audio id="background-music" loop>
+    <source src="./assets/my-love-medium-177577.mp3" type="audio/mp3">
+  
+</audio>
+
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+
+      
+        <img src="./assets/images/hp_putih.png" width="90" height="90" alt="HappyPrinting" class="logo-light" > 
+        
+        
+            
+         
+        
+
+        <img src="./assets/images/hp_aqua.png" width="90" height="90" alt="happyprinting" class="logo-dark">
+
+        
+      
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/hp_aqua.png" width="70" height="70" alt="happyprinting">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="produk.html" class="navbar-link">Produk</a>
+          </li>
+
+          <li>
+            <a href="tentangkami.html" class="navbar-link">Tentang kami</a>
+          </li>
+
+          <li>
+            <a href="kontak.html" class="navbar-link">Kontak</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:happyprinting81@gmail.com" class="contact-link">happyprinting81@gmail.com</a>
+
+          
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=6285280400417" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          
+
+          
+
+          <li>
+            <a href="https://www.instagram.com/happy_printing_/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          
+        </ul>
+
+      </nav>
+
+      
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Selamat datang di HappyPrinting, rumahnya kebahagiaan 
+              dalam setiap cetakan undangan pernikahan.</h1>
+
+            <p class="hero-text">
+              Solusi cepat undangan pernikahan anda !! <br><br>
+              <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            </p>
+
+            
+            
+          
+            
+            
+
+            
+            
+
+            <div class="btn-wrapper">
+
+              <a href="#selengkapnya" class="btn btn-primary">Selengkapnya</a>
+
+              <a href="kontak.html" class="btn btn-outline">Kontak</a>
+
+            </div>
+
+          </div>
+
+          <div class="hero-slider" data-slider>
+
+            <div class="slider-container">
+              <ul class="slider" data-slider-container>
+
+                
+
+                <li class="slider-item">
+
+                  <div class="hero-card">
+                    <figure class="img-holder" style="--width: 575; --height: 550;">
+                      <img src="./assets/images/hero-slide-5.jpg" width="560" height="350" alt="hero banner"
+                        class="img-cover">
+                    </figure>
+
+                    
+                  </div>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/hero-slide-6.jpg" width="560" height="350" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/hero-slide-7.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/hero-slide-8.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/hero-slide-9.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/hero-slide-11.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/hero-slide-12.jpg" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+              
+
+
+
+
+              </ul>
+            </div>
+
+            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+
+            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" aria-labelledby="service-label" id="selengkapnya">
+        <div class="container">
+
+          <p class="section-subtitle" id="service-label">Apa itu happyprinting ?</p>
+
+          <h2 class="h2 section-title" style="color:#3b3939;">
+            HappyPrinting adalah layanan percetakan khusus untuk undangan pernikahan
+            
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+             
+
+                <div class="card-icon">
+                  <i class="fa fa-id-card" aria-hidden="true"></i>
+                  
+                </div>
+
+                <h3 class="h4 card-title" style="color:#3b3939;">Bahan</h3>
+
+                <p class="card-text">
+                  Menggunakan bahan kertas BC (brief card) dan Kraft yang memiliki tekstur kasar sehingga terkesan istimewa. 
+                </p>
+
+                
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                </div>
+
+                <h3 class="h4 card-title" style="color:#3b3939;">Estimasi pengerjaan</h3>
+
+                <p class="card-text">
+                  Estimasi pengerjaan paling lambat 17 hari (tergantung list dan jumlah pcs pesanan)
+                </p>
+
+                
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                </div>
+
+                <h3 class="h4 card-title" style="color:#3b3939;">Bonus</h3>
+
+                <p class="card-text">
+                  Beragam bonus yang diberikan, mulai dari undangan animasi digital dan masih banyak lainnya
+                </p>
+
+              
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <i class="fa fa-object-group" aria-hidden="true"></i>
+                </div>
+
+                <h3 class="h4 card-title" style="color:#3b3939;">Desain</h3>
+
+                <p class="card-text">
+                  50+ model desain undangan yang menarik
+                </p>
+
+                
+
+              </div>
+            </li>
+
+
+
+
+            
+          </ul>
+
+        </div>
+<br>
+
+          <h3 class=" section-title">
+            "Kami percaya bahwa setiap momen istimewa dalam hidup harus dirayakan 
+            dengan kebahagiaan yang tak terlupakan. Itulah mengapa kami dengan bangga mempersembahkan 
+            layanan percetakan khusus untuk undangan pernikahan, 
+            di mana kreativitas dan kualitas bertemu dalam harmoni sempurna"
+          </h3>
+
+
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="about" aria-labelledby="about-label">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/images/nikahh.png" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle" id="about-label">Kenapa harus memilih kami ?</p>
+
+            <h2 class="h2 section-title" style="color:#3b3939;">
+              Kami adalah solusi yang tepat untuk undangan pernikahan anda.
+            </h2>
+
+            <ul>
+
+              <li class="about-item">
+                <div class="accordion-card expanded" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Professional Design</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Setiap pasangan memiliki cerita cinta mereka sendiri. Kami berkomitmen untuk 
+                    membuat setiap undangan menjadi cerminan dari karakter dan gaya unik Anda.
+                    dan Beragam desain yang ditawarkan 
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Berkualitas</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Undangan pernikahan adalah kenang-kenangan berharga yang akan dijaga sepanjang masa. Dengan teknologi percetakan modern dan bahan berkualitas tinggi, kami menjamin bahwa setiap cetakan 
+                    dari happyprinting akan memiliki tampilan yang tajam dan mencolok. 
+                  </p>
+
+                </div>
+              </li>
+
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Proses Pemesanan Mudah dan Cepat</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Kami memahami bahwa persiapan pernikahan dapat menjadi sibuk, jadi kami telah 
+                    merancang proses pemesanan yang sederhana dan cepat. Dari konsultasi awal hingga pengiriman akhir, 
+                    kami akan memastikan pengalaman Anda dengan kami berjalan dengan lancar.
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Pelayanan Pelanggan Prima</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Kepuasan Anda adalah prioritas utama kami. Kami siap mendengarkan pertanyaan, 
+                    masukan, dan kebutuhan Anda, 
+                    dan berusaha memberikan pelayanan pelanggan yang luar biasa setiap saat.
+                  </p>
+
+                </div>
+              </li>
+
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Pengiriman Tepat Waktu</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Kami menghargai pentingnya waktu dalam persiapan pernikahan. Undangan Anda 
+                    akan dicetak dan dikirimkan tepat waktu, 
+                    sehingga Anda memiliki cukup waktu untuk mendistribusikannya kepada tamu undangan Anda.
+                    (pengantaran khusus dalam kota)
+                  </p>
+
+                </div>
+              </li>
+
+
+
+              
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Harga Kompetitif</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Kami percaya bahwa kualitas tinggi tidak harus selalu mahal. HappyPrinting menawarkan 
+                    harga yang kompetitif tanpa mengorbankan kualitas cetakan dan desain yang luar biasa.
+                  </p>
+
+                </div>
+              </li>
+    
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+      <section class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="./assets/images/nikah.png" width="800" height="531" loading="lazy" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <p class="section-subtitle" id="feautre-label">Apa yang membuat HappyPrinting begitu istimewa?</p>
+
+            <h2 class="h2 section-title" style="color:#3b3939;">
+              Selain dari cetakan berkualitas tinggi dan desain yang menawan, kami memahami 
+              bahwa setiap pasangan memiliki cerita yang berbeda. 
+            </h2>
+
+            <p class="section-text">
+              Keindahan bukanlah satu-satunya hal yang kami utamakan. Kami juga memahami betapa berharganya waktu Anda dalam persiapan pernikahan. Oleh karena itu, kami berkomitmen untuk memberikan pengalaman pemesanan yang mulus dan cepat, serta pengiriman tepat waktu 
+              agar undangan Anda siap untuk dibagikan kepada keluarga dan teman-teman tercinta.
+            </p>
+
+            <ul class="feature-list">
+              <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Desain yang Unik dan Menarik
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Kualitas Cetak Premium
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Solusi Ramah Lingkungan
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Layanan Pengeditan dan Revisi
+                  </span>
+
+                </div>
+              </li>
+
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Kepuasan Pelanggan Utama
+                  </span>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+        - #PROJECT
+      -->
+
+      <section class="section project" aria-labelledby="project-label">
+        <div class="container" style="margin-top: -70px;">
+
+          <p class="section-subtitle" id="project-label">Produk Kami</p>
+
+            <h2 class="h2 section-title" style="color:#3b3939;">
+              Beragam Model katalog dan bonus undangan animasi digital dengan desain cantik dan elegan yang di tawarkan
+            </h2>
+          <ul class="grid-list">
+
+           
+
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" href="./assets/images/cover_cg.01.png" data-caption="Cover">
+                      <img src="./assets/images/CG.55.jpg" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(luar)_cg.01.png" data-caption="Isi (luar)"></a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(dalam)_cg.01.png" data-caption="Isi (dalam)"></a>
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    CG.55
+                  </h3>
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Ukuran                   :  14,5x20 cm</li>
+                      <li># Bahan Kertas             :  Kertas BC 150 GSM</li>
+                      <li style="margin-bottom: -20px;"># Include label & plastik    </li><br>
+                      <li style="background: linear-gradient(to right, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 2.500/pcs & Bonus undangan animasi digital (order > 300pcs)</li>
+                      <li style="margin-top: 8px; background: linear-gradient(to left, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 3.000/pcs (order < 300pcs)</li>
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                    <a href="https://api.whatsapp.com/send?phone=+6285280400417&text=Mau tanya-tanya tentang undangan model CG.55">
+                    <li class="card-meta-item" style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
+                     
+                       
+                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                      <h3 class="meta-text">Order</h3>
+                    </li></a>        
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" href="./assets/images/cover_cg.01.png" data-caption="Cover">
+                      <img src="./assets/images/CG.56.jpg" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(luar)_cg.01.png" data-caption="Isi (luar)"></a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(dalam)_cg.01.png" data-caption="Isi (dalam)"></a>
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    CG.56
+                  </h3>
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Ukuran                   :  14,5x20 cm</li>
+                      <li># Bahan Kertas             :  Kertas BC 150 GSM</li>
+                      <li style="margin-bottom: -20px;"># Include label & plastik    </li><br>
+                      <li style="background: linear-gradient(to right, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 2.500/pcs & Bonus undangan animasi digital (order > 300pcs)</li>
+                      <li style="margin-top: 8px; background: linear-gradient(to left, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 3.000/pcs (order < 300pcs)</li>
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                    <a href="https://api.whatsapp.com/send?phone=+6285280400417&text=Mau tanya-tanya tentang undangan model CG.49">
+                    <li class="card-meta-item" style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
+                     
+                       
+                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                      <h3 class="meta-text">Order</h3>
+                    </li></a>        
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" href="./assets/images/cover_cg.01.png" data-caption="Cover">
+                      <img src="./assets/images/CG.57.jpg" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(luar)_cg.01.png" data-caption="Isi (luar)"></a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(dalam)_cg.01.png" data-caption="Isi (dalam)"></a>
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    CG.57
+                  </h3>
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Ukuran                   :  14,5x20 cm</li>
+                      <li># Bahan Kertas             :  Kertas BC 150 GSM</li>
+                      <li style="margin-bottom: -20px;"># Include label & plastik    </li><br>
+                      <li style="background: linear-gradient(to right, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 2.500/pcs & Bonus undangan animasi digital (order > 300pcs)</li>
+                      <li style="margin-top: 8px; background: linear-gradient(to left, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 3.000/pcs (order < 300pcs)</li>
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                    <a href="https://api.whatsapp.com/send?phone=+6285280400417&text=Mau tanya-tanya tentang undangan model CG.49">
+                    <li class="card-meta-item" style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
+                     
+                       
+                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                      <h3 class="meta-text">Order</h3>
+                    </li></a>        
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" href="./assets/images/cover_cg.01.png" data-caption="Cover">
+                      <img src="./assets/images/CG.58.jpg" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(luar)_cg.01.png" data-caption="Isi (luar)"></a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(dalam)_cg.01.png" data-caption="Isi (dalam)"></a>
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    CG.58
+                  </h3>
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Ukuran                   :  14,5x20 cm</li>
+                      <li># Bahan Kertas             :  Kertas BC 150 GSM</li>
+                      <li style="margin-bottom: -20px;"># Include label & plastik    </li><br>
+                      <li style="background: linear-gradient(to right, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 2.500/pcs & Bonus undangan animasi digital (order > 300pcs)</li>
+                      <li style="margin-top: 8px; background: linear-gradient(to left, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 3.000/pcs (order < 300pcs)</li>
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                    <a href="https://api.whatsapp.com/send?phone=+6285280400417&text=Mau tanya-tanya tentang undangan model CG.49">
+                    <li class="card-meta-item" style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
+                     
+                       
+                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                      <h3 class="meta-text">Order</h3>
+                    </li></a>        
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" href="./assets/images/cover_cg.01.png" data-caption="Cover">
+                      <img src="./assets/images/CG.59.jpg" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(luar)_cg.01.png" data-caption="Isi (luar)"></a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(dalam)_cg.01.png" data-caption="Isi (dalam)"></a>
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    CG.59
+                  </h3>
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Ukuran                   :  14,5x20 cm</li>
+                      <li># Bahan Kertas             :  Kertas BC 150 GSM</li>
+                      <li style="margin-bottom: -20px;"># Include label & plastik    </li><br>
+                      <li style="background: linear-gradient(to right, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 2.700/pcs & Bonus undangan animasi digital (order > 300pcs)</li>
+                      <li style="margin-top: 8px; background: linear-gradient(to left, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 3.000/pcs (order < 300pcs)</li>
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                    <a href="https://api.whatsapp.com/send?phone=+6285280400417&text=Mau tanya-tanya tentang undangan model CG.49">
+                    <li class="card-meta-item" style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
+                     
+                       
+                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                      <h3 class="meta-text">Order</h3>
+                    </li></a>        
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" href="./assets/images/cover_cg.01.png" data-caption="Cover">
+                      <img src="./assets/images/CG.49.jpg" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(luar)_cg.01.png" data-caption="Isi (luar)"></a>
+                  <a data-fancybox="gallery" href="./assets/images/isi(dalam)_cg.01.png" data-caption="Isi (dalam)"></a>
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">
+                    CG.49
+                  </h3>
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Ukuran                   :  14,5x20 cm</li>
+                      <li># Bahan Kertas             :  Kertas BC 150 GSM</li>
+                      <li style="margin-bottom: -20px;"># Include label & plastik    </li><br>
+                      <li style="background: linear-gradient(to right, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 2.500/pcs & Bonus undangan animasi digital (order > 300pcs)</li>
+                      <li style="margin-top: 8px; background: linear-gradient(to left, #14C5FB, #A5AED6); padding: 5px 5px; color: white; border-radius: 5px;">Rp. 3.000/pcs (order < 300pcs)</li>
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                    <a href="https://api.whatsapp.com/send?phone=+6285280400417&text=Mau tanya-tanya tentang undangan model CG.56">
+                    <li class="card-meta-item" style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
+                     
+                       
+                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                      <h3 class="meta-text">Order</h3>
+                    </li></a>        
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" data-type="iframe" href="./assets/images/01.mp4" data-caption="undangan animasi digital bunga rose">
+                      <img src="./assets/images/01 cover.png" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title" style="color: rgb(217, 45, 29);">
+                    Blooming Roses
+                </h3>
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Durasi                   :  1 Menit</li>
+                      <li># Resolusi                 :  768 x 1080 pixels (portrait)</li>
+                      <li># Tema                     :  Keindahan bunga rose yang Abadi</li>
+                      <li># Format                   :  Video digital (MP4)</li>
+                      <li># Musik                    :  Costum</li>
+                      <li style="margin-bottom: -20px;"># Gaya    :  Elegan dan Modern</li><br>
+                      
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                           
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+           
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" data-type="iframe" href="./assets/images/02.mp4" data-caption="undangan animasi digital bunga peony">
+                      <img src="./assets/images/02 cover.png" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title" style="color: rgb(76, 51, 37);">
+                    Tenderness of Peonies
+                </h3>
+                
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Durasi                   :  1 Menit</li>
+                      <li># Resolusi                 :  768 x 1080 pixels (portrait)</li>
+                      <li># Tema                     :  kelembutan bunga Peony</li>
+                      <li># Format                   :  Video digital (MP4)</li>
+                      <li># Musik                    :  Costum</li>
+                      <li style="margin-bottom: -20px;"># Gaya    :  Elegan dan Modern</li><br>
+                      
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                           
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+
+
+
+
+
+
+
+
+
+            <li>
+              <div class="project-card" style="position: relative;">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <a data-fancybox="gallery" data-type="iframe" href="./assets/images/08.mp4" data-caption="undangan animasi digital bunga monstera">
+                      <img src="./assets/images/08 cover.png" width="560" height="350" loading="lazy" alt="happyprinting" class="img-cover">
+                  </a>
+                  
+                  <!-- Add more images as needed -->
+              </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title" style="color: rgb(52, 60, 42);">
+                    Monstera Flower Charm
+                </h3>
+                
+
+                  <p class="card-text">
+                    <ul>
+                      <li># Durasi                   :  50 Detik</li>
+                      <li># Resolusi                 :  768 x 1080 pixels (portrait)</li>
+                      <li># Tema                     :  Pesona Bunga Janda Bolong</li>
+                      <li># Format                   :  Video digital (MP4)</li>
+                      <li># Musik                    :  Costum</li>
+                      <li style="margin-bottom: -20px;"># Gaya    :  Elegan dan Modern</li><br>
+                      
+                    </ul>
+                  </p><br>
+
+                  <ul class="card-meta-list">
+                    <li class="card-meta-item">
+                      <img src="./assets/images/icon.png" width="20" height="20" alt="HappyPrinting" class="logo-light" >
+
+                      <time class="meta-text">HappyPrinting</time>
+                    </li>
+                           
+                  </ul>   
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul><br><br>
+          <h2> Dan masih banyak lagi bonus model undangan animasi digital yang anda bisa dapatkan</h2>
+          <br><br>
+          <a href="produk.html" class="btn btn-primary" style="background: linear-gradient(to left, #14C5FB, #A5AED6); color: white;">Selengkapnya</a><br><br>
+
+          <i> <h4>Bersama HappyPrinting, mari ciptakan undangan pernikahan yang lebih dari sekedar kertas, tetapi juga sebuah karya seni yang membawa senyuman, harapan, dan tentu saja kebahagiaan. Jadikan momen istimewa Anda semakin 
+            berarti dengan sentuhan personal dari HappyPrinting. Kita cetak kebahagiaan bersama!"</h4></i>
+        </div>
+
+        
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+      
+
+
+
+
+
+      
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+
+              <marquee behavior="scroll" direction="left" scrollamount="9">
+            <h2 class="h2 section-title">!!! Untuk info/pemesanan lebih lanjut silahkan hubungi kontak yang tertera, Salam Happy</h2>
+          </marquee>
+          
+
+          
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" >
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/images/hp_aqua.png" width="74" height="24" alt="happyprinting">
+          
+        </a>
+
+        <p class="footer-text">
+          &copy; 2024 HappyPrinting <br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=6285280400417" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+
+          
+
+          <li>
+            <a href="https://www.instagram.com/happy_printing_/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title" style="color: #00C2FF;">Informasi</p>
+        </li>
+        
+
+        <li>
+          <address class="footer-text">
+            Indonesia, Sulawesi-selatan, Kab. Soppeng
+          </address>
+        </li>
+
+        <li>
+          <a href="" class="footer-link">happyprinting81@gmail.com</a>
+        </li>
+
+       
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title"  style="color: #00C2FF;">Selengkapnya</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Home</a>
+        </li>
+
+        <li>
+          <a href="produk.html" class="footer-link">Produk</a>
+        </li>
+
+        <li>
+          <a href="tentangkami.html" class="footer-link">Tentang kami</a>
+        </li>
+
+        <li>
+          <a href="kontak.html" class="footer-link">Kontak</a>
+        </li>
+
+      </ul>
+
+     
+
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+ 
+ 
+ <script>
+    const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider-item');
+
+let currentIndex = 0;
+const intervalTime = 2000; // Ganti slide setiap 1 detik
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    const offset = -currentIndex * slider.clientWidth; // Gunakan clientWidth untuk mendapatkan lebar yang akurat
+    slider.style.transform = `translateX(${offset}px)`;
+}
+
+setInterval(nextSlide, intervalTime);
+
+  </script>
+  
+
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("background-music");
+
+    // Function to play audio
+    function playAudio() {
+        if (audio.paused) {
+            audio.play();
+        }
+    }
+
+    // Add event listener to start audio after user interaction
+    document.body.addEventListener("click", function() {
+        playAudio();
+        // Remove the event listener after first interaction
+        document.body.removeEventListener("click", arguments.callee);
+    });
+});
+</script>
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+</body>
+
+</html>

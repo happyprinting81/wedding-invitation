@@ -33,6 +33,10 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <style>
     .slider-container {
@@ -102,7 +106,7 @@
     - #HEADER
   -->
 
-  <header class="header" data-header>
+  <header class="header animate__animated animate__fadeInDown" data-header>
     <div class="container">
 
       <a href="#" class="logo">
@@ -121,9 +125,9 @@
       
       </a>
 
-      <nav class="navbar" data-navbar>
+      <nav class="navbar " data-navbar >
 
-        <div class="navbar-top">
+        <div class="navbar-top animate__animated animate__fadeInDown">
           <a href="#" class="logo">
             <img src="./assets/images/hp_aqua.png" width="70" height="70" alt="happyprinting">
           </a>
@@ -210,12 +214,11 @@
 
           <div class="hero-content">
 
-            <h1 class="h1 hero-title">Selamat datang di HappyPrinting, rumahnya kebahagiaan 
+            <h1 class="h1 hero-title animate__animated animate__fadeInUp animate__delay-1s" style="--animate-delay: 0.4s;">Selamat datang di HappyPrinting, rumahnya kebahagiaan 
               dalam setiap cetakan undangan pernikahan.</h1>
 
-            <p class="hero-text">
-              Solusi cepat undangan pernikahan anda !! <br><br>
-              <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            <p class="hero-text animate__animated animate__fadeInUp animate__delay-1s" style="--animate-delay: 1s;">
+              Solusi cepat undangan pernikahan anda !! <br>
             </p>
 
             
@@ -229,15 +232,15 @@
 
             <div class="btn-wrapper">
 
-              <a href="#selengkapnya" class="btn btn-primary">Selengkapnya</a>
+              <a href="#selengkapnya" class="btn btn-primary animate__animated animate__fadeInLeftBig animate__delay-1s" style="--animate-delay: 1.2s;">Selengkapnya</a>
 
-              <a href="kontak.html" class="btn btn-outline">Kontak</a>
+              <a href="kontak.html" class="btn btn-outline animate__animated animate__fadeInLeftBig animate__delay-1s" style="--animate-delay: 0.9s;">Kontak</a>
 
             </div>
 
           </div>
 
-          <div class="hero-slider" data-slider>
+          <div class="hero-slider animate__animated animate__fadeInUp animate__delay-1s" data-slider>
 
             <div class="slider-container">
               <ul class="slider" data-slider-container>
@@ -339,9 +342,9 @@
       <section class="section service" aria-labelledby="service-label" id="selengkapnya">
         <div class="container">
 
-          <p class="section-subtitle" id="service-label">Apa itu happyprinting ?</p>
+          <p class="section-subtitle" id="service-label" data-aos="zoom-in-down" data-aos-duration="1000">Apa itu happyprinting ?</p>
 
-          <h2 class="h2 section-title" style="color:#3b3939;">
+          <h2 class="h2 section-title" style="color:#3b3939;" data-aos="zoom-in-down" data-aos-duration="3000">
             HappyPrinting adalah layanan percetakan khusus untuk undangan pernikahan
             
           </h2>
@@ -353,14 +356,14 @@
 
              
 
-                <div class="card-icon">
+                <div class="card-icon" data-aos="fade-up" data-aos-duration="1000">
                   <i class="fa fa-id-card" aria-hidden="true"></i>
                   
                 </div>
 
-                <h3 class="h4 card-title" style="color:#3b3939;">Bahan</h3>
+                <h3 class="h4 card-title" style="color:#3b3939;" data-aos="fade-up" data-aos-duration="1000">Bahan</h3>
 
-                <p class="card-text">
+                <p class="card-text" data-aos="fade-up" data-aos-duration="1000">
                   Menggunakan bahan kertas BC (brief card) dan Kraft yang memiliki tekstur kasar sehingga terkesan istimewa. 
                 </p>
 
@@ -372,13 +375,13 @@
             <li>
               <div class="service-card">
 
-                <div class="card-icon">
+                <div class="card-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                   <i class="fa fa-calendar" aria-hidden="true"></i>
                 </div>
 
-                <h3 class="h4 card-title" style="color:#3b3939;">Estimasi pengerjaan</h3>
+                <h3 class="h4 card-title" style="color:#3b3939;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">Estimasi pengerjaan</h3>
 
-                <p class="card-text">
+                <p class="card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                   Estimasi pengerjaan paling lambat 17 hari (tergantung list dan jumlah pcs pesanan)
                 </p>
 
@@ -390,13 +393,13 @@
             <li>
               <div class="service-card">
 
-                <div class="card-icon">
+                <div class="card-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                   <i class="fa fa-certificate" aria-hidden="true"></i>
                 </div>
 
-                <h3 class="h4 card-title" style="color:#3b3939;">Bonus</h3>
+                <h3 class="h4 card-title" style="color:#3b3939;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">Bonus</h3>
 
-                <p class="card-text">
+                <p class="card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
                   Beragam bonus yang diberikan, mulai dari undangan animasi digital dan masih banyak lainnya
                 </p>
 
@@ -408,13 +411,13 @@
             <li>
               <div class="service-card">
 
-                <div class="card-icon">
+                <div class="card-icon" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500">
                   <i class="fa fa-object-group" aria-hidden="true"></i>
                 </div>
 
-                <h3 class="h4 card-title" style="color:#3b3939;">Desain</h3>
+                <h3 class="h4 card-title" style="color:#3b3939;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500">Desain</h3>
 
-                <p class="card-text">
+                <p class="card-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500">
                   50+ model desain undangan yang menarik
                 </p>
 
@@ -432,7 +435,9 @@
         </div>
 <br>
 
-          <h3 class=" section-title">
+          <h3 class=" section-title" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
             "Kami percaya bahwa setiap momen istimewa dalam hidup harus dirayakan 
             dengan kebahagiaan yang tak terlupakan. Itulah mengapa kami dengan bangga mempersembahkan 
             layanan percetakan khusus untuk undangan pernikahan, 
@@ -453,16 +458,18 @@
       <section class="about" aria-labelledby="about-label">
         <div class="container">
 
-          <figure class="about-banner">
+          <figure class="about-banner" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
             <img src="./assets/images/nikahh.png" width="800" height="580" loading="lazy" alt="about banner"
               class="w-100">
           </figure>
 
           <div class="about-content">
 
-            <p class="section-subtitle" id="about-label">Kenapa harus memilih kami ?</p>
+            <p class="section-subtitle" id="about-label" data-aos="zoom-in-down" data-aos-duration="1000">Kenapa harus memilih kami ?</p>
 
-            <h2 class="h2 section-title" style="color:#3b3939;">
+            <h2 class="h2 section-title" style="color:#3b3939;" data-aos="zoom-in-down" data-aos-duration="3000">
               Kami adalah solusi yang tepat untuk undangan pernikahan anda.
             </h2>
 
@@ -610,16 +617,18 @@
       <section class="section feature" aria-labelledby="feature-label">
         <div class="container">
 
-          <figure class="feature-banner">
+          <figure class="feature-banner" data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000">
             <img src="./assets/images/nikah.png" width="800" height="531" loading="lazy" alt="feature banner"
               class="w-100">
           </figure>
 
           <div class="feature-content">
 
-            <p class="section-subtitle" id="feautre-label">Apa yang membuat HappyPrinting begitu istimewa?</p>
+            <p class="section-subtitle" id="feautre-label" data-aos="zoom-in-down" data-aos-duration="1000">Apa yang membuat HappyPrinting begitu istimewa?</p>
 
-            <h2 class="h2 section-title" style="color:#3b3939;">
+            <h2 class="h2 section-title" style="color:#3b3939;" data-aos="zoom-in-down" data-aos-duration="3000">
               Selain dari cetakan berkualitas tinggi dan desain yang menawan, kami memahami 
               bahwa setiap pasangan memiliki cerita yang berbeda. 
             </h2>
@@ -725,9 +734,9 @@
       <section class="section project" aria-labelledby="project-label">
         <div class="container" style="margin-top: -70px;">
 
-          <p class="section-subtitle" id="project-label">Produk Kami</p>
+          <p class="section-subtitle" id="project-label" data-aos="zoom-in-down" data-aos-duration="1000">Produk Kami</p>
 
-            <h2 class="h2 section-title" style="color:#3b3939;">
+            <h2 class="h2 section-title" style="color:#3b3939;" data-aos="zoom-in-down" data-aos-duration="3000">
               Beragam Model katalog dan bonus undangan animasi digital dengan desain cantik dan elegan yang di tawarkan
             </h2>
           <ul class="grid-list">
@@ -1376,7 +1385,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 
 </html>
+

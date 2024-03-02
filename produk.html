@@ -38,6 +38,11 @@
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link href="path-to-lightbox2/lightbox.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   <style>
     .card-banner {
   display: flex;
@@ -77,7 +82,7 @@
     - #HEADER
   -->
 
-  <header class="header" data-header>
+  <header class="header animate__animated animate__fadeInDown" data-header>
     <div class="container">
 
       <a href="index.html" class="logo">
@@ -179,8 +184,8 @@
         style="background-image: url('./assets/images/hero-bg.jpg')">
        
 
-          <h1 style="text-align: center; color: white;" class="h1 hero-title">Produk kami</h1><br>
-          <h2 style="text-align: center; color: white;">
+          <h1 style="text-align: center; color: white;" class="h1 hero-title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">Produk kami</h1><br>
+          <h2 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
             Beragam produk dengan desain cantik dan elegan yang ditawarkan
           </h2>
       </section>
@@ -3357,6 +3362,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   
 </body>
 

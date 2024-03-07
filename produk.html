@@ -56,6 +56,51 @@
   max-height: 100%;
 }
   </style>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px; /* Mengatur jarak dari bawah */
+    right: 30px; /* Mengatur jarak dari samping kanan */
+    z-index: 1000;
+    animation: floatAnimation 0.8s infinite alternate; /* Animasi mengambang */
+  }
+
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px); /* Menggerakkan ke atas */
+    }
+  }
+
+  .whatsapp-float img {
+    width: 60px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+    height: auto;
+  }
+
+  .hover-text {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    position: absolute;
+    top: 50%;
+    left: -404px; /* Jarak dari ikon WhatsApp */
+    transform: translateY(-50%);
+    white-space: nowrap; /* Memastikan teks tidak pindah ke baris baru */
+    display: inline-block; /* Memastikan teks memanjang secara horizontal */
+    background-color: #30BB4A;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+
+  .whatsapp-float:hover .hover-text {
+    opacity: 1;
+  }
+</style>
+
+
   <!-- 
     - preload images
   -->
@@ -3319,10 +3364,16 @@
           <a href="kontak.html" class="footer-link">Kontak</a>
         </li>
       </ul>
-
-     
-
     </div>
+
+
+    <div class="whatsapp-float">
+      <a href="https://api.whatsapp.com/send?phone=6285280400417" target="_blank">
+        <img src="./assets/images/wa.png" alt="WhatsApp">
+        <span class="hover-text">Ciptakan kenangan indah dengan undangan kami!</span>
+      </a>
+    </div>
+
   </footer>
 
 

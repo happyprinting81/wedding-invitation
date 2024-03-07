@@ -69,6 +69,48 @@
 }
 
   </style>
+ <style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px; /* Mengatur jarak dari bawah */
+    right: 30px; /* Mengatur jarak dari samping kanan */
+    z-index: 1000;
+    animation: floatAnimation 0.8s infinite alternate; /* Animasi mengambang */
+  }
+
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px); /* Menggerakkan ke atas */
+    }
+  }
+
+  .whatsapp-float img {
+    width: 60px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+    height: auto;
+  }
+
+  .hover-text {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    position: absolute;
+    top: 50%;
+    left: -404px; /* Jarak dari ikon WhatsApp */
+    transform: translateY(-50%);
+    white-space: nowrap; /* Memastikan teks tidak pindah ke baris baru */
+    display: inline-block; /* Memastikan teks memanjang secara horizontal */
+    background-color: #30BB4A;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+
+  .whatsapp-float:hover .hover-text {
+    opacity: 1;
+  }
+</style>
 
  
 
@@ -1006,14 +1048,6 @@
 
 
 
-
-
-
-
-
-
-
-
             <li>
               <div class="project-card" style="position: relative;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
 
@@ -1051,7 +1085,7 @@
                     <a href="https://api.whatsapp.com/send?phone=+6285280400417&text=Mau tanya-tanya tentang undangan model CG.49">
                     <li class="card-meta-item" style="position: absolute; bottom: 20px; right: 20px; display: flex; align-items: center;">
                      
-                       
+                  
                       <i class="fa fa-cart-plus" aria-hidden="true"></i>
                       <h3 class="meta-text">Order</h3>
                     </li></a>        
@@ -1112,7 +1146,7 @@
 
 
 
-           
+        
             <li>
               <div class="project-card" style="position: relative;" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
 
@@ -1330,6 +1364,13 @@
      
 
     </div>
+    <div class="whatsapp-float">
+      <a href="https://api.whatsapp.com/send?phone=6285280400417" target="_blank">
+        <img src="./assets/images/wa.png" alt="WhatsApp">
+        <span class="hover-text">Ciptakan kenangan indah dengan undangan kami!</span>
+      </a>
+    </div>
+    
   </footer>
 
   <!-- 

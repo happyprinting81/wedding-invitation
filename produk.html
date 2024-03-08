@@ -37,6 +37,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="style_floating.css">
   <link href="path-to-lightbox2/lightbox.css" rel="stylesheet">
   <link
     rel="stylesheet"
@@ -168,7 +169,7 @@
           </li>
 
           <li>
-            <a href="kontak.html" class="navbar-link">Kontak</a>
+            <a href="#kontak" class="navbar-link">Kontak</a>
           </li>
 
         </ul>
@@ -3285,12 +3286,12 @@
     - #FOOTER
   -->
 
-  <footer class="footer">
+  <footer class="footer" id="kontak">
     <div class="container grid-list">
 
       <div class="footer-brand">
 
-        <a href="index.html" class="logo">
+        <a href="#" class="logo">
           <img src="./assets/images/hp_aqua.png" width="74" height="24" alt="happyprinting">
           
         </a>
@@ -3302,22 +3303,19 @@
         <ul class="social-list">
 
           <li>
-            <a href="https://api.whatsapp.com/send?phone=6285280400417" class="social-link">
-              <ion-icon name="logo-whatsapp"></ion-icon>
-            </a>
-          </li>
-
-          
-
-          
-
-          <li>
             <a href="https://www.instagram.com/happy_printing_/" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
 
+          <li>
+            <a href="mailto:happyprinting81@gmail.com" class="social-link">
+              <ion-icon name="mail"></ion-icon>
+            </a>
+          </li>
+
           
+
         </ul>
 
       </div>
@@ -3325,8 +3323,9 @@
       <ul class="footer-list">
 
         <li>
-          <p class="h4 footer-list-title"  style="color: #00C2FF;">Informasi</p>
+          <p class="h4 footer-list-title" style="color: #00C2FF;">Informasi</p>
         </li>
+        
 
         <li>
           <address class="footer-text">
@@ -3334,11 +3333,9 @@
           </address>
         </li>
 
-        <li>
-          <a href="mailto:happyprinting81@gmail.com" class="footer-link">happyprinting81@gmail.com</a>
-        </li>
+        
 
-      
+       
 
       </ul>
 
@@ -3349,7 +3346,7 @@
         </li>
 
         <li>
-          <a href="index.html" class="footer-link">Home</a>
+          <a href="#" class="footer-link">Home</a>
         </li>
 
         <li>
@@ -3360,56 +3357,160 @@
           <a href="tentangkami.html" class="footer-link">Tentang kami</a>
         </li>
 
-        <li>
-          <a href="kontak.html" class="footer-link">Kontak</a>
-        </li>
+        
+
       </ul>
+
+  
     </div>
 
 
-    <div class="whatsapp-float">
-      <a href="https://api.whatsapp.com/send?phone=6285280400417" target="_blank">
-        <img src="./assets/images/wa.png" alt="WhatsApp">
-        <span class="hover-text">Ciptakan kenangan indah dengan undangan kami!</span>
-      </a>
-    </div>
 
+    
+    <div class="WA_Chat_Widget" data-position="bottom-right">
+      <div class="WA_ChatBox">
+          <div class="WA_ChatBox_Header">
+              <div class="avatarBox">
+                  <img src="./assets/images/icon.png" alt="HappyPrinting" width="30" height="10">
+              </div>
+              <div class="infoBox">
+                  <h4 class="name">HappyPrinting</h4>
+                  <span class="answer_time">Spesialis percetakan undangan</span>
+              </div>
+              <button class="WA_Close" onclick="hideChatbox()"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                      viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                      <path
+                          d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
+                  </svg></button>
+          </div>
+          <div class="WA_ChatBox_Body">
+              <div class="message">
+                  <h4 class="username">Admin HappyPrinting</h4>
+                  <div class="message_content">
+                      <p>Hai, Ada yang bisa kami bantu?</p>
+                  </div>
+              </div>
+          </div>
+  
+        
+          <div class="WA_ChatBox_Footer">
+            <input id="pesan" class="input" placeholder="Ketik Pesan" style="margin-left: 9px; color: #000000;">
+            <button id="sendMessageButton" class="send-button" onclick="sendMessage()" disabled style="pointer-events: none;">
+                <img src="./assets/images/kirimm.png" class="icon-plane" alt="Kirim" style="width: 40px; height: auto;">
+            </button>
+        </div>
+        
+        
+        
+      
+        
+          <script>
+
+
+document.getElementById("pesan").addEventListener("input", function() {
+    var inputField = document.getElementById("pesan");
+    var sendButton = document.getElementById("sendMessageButton");
+
+    if (inputField.value.trim() !== "") {
+        sendButton.disabled = false;
+        sendButton.style.pointerEvents = "auto";
+    } else {
+        sendButton.disabled = true;
+        sendButton.style.pointerEvents = "none";
+    }
+});
+
+
+
+            function sendMessage() {
+    var message = document.getElementById('pesan').value;
+    var phone = '6285280400417'; // Ganti dengan nomor WhatsApp yang dituju, sertakan kode negara tanpa tanda plus (+)
+
+    // Membuka WhatsApp dengan pesan yang sudah ditulis
+    window.open('https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message), '_blank');
+}
+
+          </script>
+          
+      </div>
+
+
+      <div class="WA_FloatingButton" onclick="toggleChatbox()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#4FCE5D" viewBox="0 0 90 90">
+              <path
+                  d="M90 43.841c0 24.213-19.779 43.841-44.182 43.841a44.256 44.256 0 01-21.357-5.455L0 90l7.975-23.522a43.38 43.38 0 01-6.34-22.637C1.635 19.628 21.416 0 45.818 0 70.223 0 90 19.628 90 43.841zM45.818 6.982c-20.484 0-37.146 16.535-37.146 36.859 0 8.065 2.629 15.534 7.076 21.61L11.107 79.14l14.275-4.537A37.122 37.122 0 0045.819 80.7c20.481 0 37.146-16.533 37.146-36.857S66.301 6.982 45.818 6.982zm22.311 46.956c-.273-.447-.994-.717-2.076-1.254-1.084-.537-6.41-3.138-7.4-3.495-.993-.358-1.717-.538-2.438.537-.721 1.076-2.797 3.495-3.43 4.212-.632.719-1.263.809-2.347.271-1.082-.537-4.571-1.673-8.708-5.333-3.219-2.848-5.393-6.364-6.025-7.441-.631-1.075-.066-1.656.475-2.191.488-.482 1.084-1.255 1.625-1.882.543-.628.723-1.075 1.082-1.793.363-.717.182-1.344-.09-1.883-.27-.537-2.438-5.825-3.34-7.977-.902-2.15-1.803-1.792-2.436-1.792-.631 0-1.354-.09-2.076-.09s-1.896.269-2.889 1.344c-.992 1.076-3.789 3.676-3.789 8.963 0 5.288 3.879 10.397 4.422 11.113.541.716 7.49 11.92 18.5 16.223C58.2 65.771 58.2 64.336 60.186 64.156c1.984-.179 6.406-2.599 7.312-5.107.9-2.512.9-4.663.631-5.111z">
+              </path>
+          </svg>
+      </div>
+  </div>
+    
   </footer>
-
-
-
-
 
   <!-- 
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+ 
+ 
+ <script>
+    const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider-item');
+
+let currentIndex = 0;
+const intervalTime = 2000; // Ganti slide setiap 1 detik
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    const offset = -currentIndex * slider.clientWidth; // Gunakan clientWidth untuk mendapatkan lebar yang akurat
+    slider.style.transform = `translateX(${offset}px)`;
+}
+
+setInterval(nextSlide, intervalTime);
+  </script>
+  
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var audio = document.getElementById("background-music");
-    
-        // Function to play audio
-        function playAudio() {
-            if (audio.paused) {
-                audio.play();
-            }
+    let isChatboxVisible = false;
+    const chatbox = document.querySelector(".WA_Chat_Widget .WA_ChatBox");
+    function hideChatbox() {
+        isChatboxVisible = false;
+        chatbox.style.display = "none";
+    }
+
+    function toggleChatbox() {
+        isChatboxVisible = !isChatboxVisible;
+        chatbox.style.display = isChatboxVisible ? "block" : "none";
+    }
+
+
+</script>
+
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("background-music");
+
+    // Function to play audio
+    function playAudio() {
+        if (audio.paused) {
+            audio.play();
         }
-    
-        // Add event listener to start audio after user interaction
-        document.body.addEventListener("click", function() {
-            playAudio();
-            // Remove the event listener after first interaction
-            document.body.removeEventListener("click", arguments.callee);
-        });
+    }
+
+    // Add event listener to start audio after user interaction
+    document.body.addEventListener("click", function() {
+        playAudio();
+        // Remove the event listener after first interaction
+        document.body.removeEventListener("click", arguments.callee);
     });
-    </script>
+});
+</script>
   <!-- 
     - ionicon
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="path-to-lightbox2/lightbox.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
@@ -3417,7 +3518,7 @@
 <script>
   AOS.init();
 </script>
-  
+
 </body>
 
 </html>

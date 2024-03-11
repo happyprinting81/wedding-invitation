@@ -210,14 +210,26 @@
 
 .WA_ChatBox_Footer .icon-plane {
     cursor: pointer;
-    width: 30px; /* Sesuaikan lebar gambar */
-    height: auto; /* Biarkan tinggi gambar disesuaikan secara otomatis */
-    margin-left: 10px; /* Berikan jarak antara input dan gambar */
+    width: 30px; /* Sesuaikan lebar tombol */
+    height: auto; /* Biarkan tinggi tombol disesuaikan secara otomatis */
+    margin-left: 5px; /* Mengurangi margin kiri */
 }
 
 .WA_ChatBox_Footer .input {
-    margin-right: 3px; /* Berikan jarak antara input dan gambar */
+    margin-right: 5px; /* Mengurangi margin kanan */
 }
+
+/* Aturan media query untuk layar yang lebih kecil */
+@media screen and (max-width: 360px) {
+    .WA_ChatBox_Footer .icon-plane {
+        width: 25px; /* Mengurangi ukuran tombol pada layar kecil */
+    }
+    
+    .WA_ChatBox_Footer .input {
+        width: calc(100% - 40px); /* Mengatur ulang lebar input */
+    }
+}
+
 
 
 

@@ -58,9 +58,10 @@
 }
 
 
-.WA_Chat_Widget .WA_ChatBox{
+.WA_Chat_Widget .WA_ChatBox {
     position: fixed;
-    width: 360px;
+    width: 90%; /* Mengubah lebar menjadi persentase */
+    max-width: 360px; /* Tetapkan lebar maksimum */
     height: auto;
     overflow: hidden;
     border-radius: 10px;
@@ -68,6 +69,15 @@
     box-shadow: 0 5px 25px 0px rgba(0, 0, 0, 0.1);
     display: none;
 }
+
+/* Tambahkan aturan media query untuk tampilan pada layar yang lebih kecil */
+@media screen and (max-width: 768px) {
+    .WA_Chat_Widget .WA_ChatBox {
+        width: 90%; /* Mengubah lebar menjadi persentase pada layar kecil */
+        max-width: none; /* Hapus batasan lebar maksimum */
+    }
+}
+
 
 .WA_Chat_Widget .WA_ChatBox .WA_ChatBox_Header{
     width: auto;
@@ -210,14 +220,4 @@
 }
 
 
-@media screen and (max-width: 768px) {
-    .WA_ChatBox_Footer {
-        justify-content: center; /* Pusatkan kotak obrolan di layar seluler */
-    }
-}
 
-@media screen and (min-width: 769px) {
-    .WA_ChatBox_Footer {
-        justify-content: flex-end; /* Geser kotak obrolan ke kanan di layar besar */
-    }
-}

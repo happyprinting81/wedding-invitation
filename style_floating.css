@@ -212,7 +212,7 @@
     width: 100%; /* Ubah lebar tombol pesawat menjadi 100% */
     max-width: 40px; /* Tetapkan lebar maksimum */
     height: auto; /* Biarkan tinggi tombol disesuaikan secara otomatis */
-    margin-left: 5px; /* Mengurangi margin kiri */
+    margin-left: 2px; /* Mengurangi margin kiri */
 }
 
 .WA_ChatBox_Footer .input {

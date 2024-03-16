@@ -224,7 +224,7 @@
 
 @media screen and (max-width: 360px) {
     .WA_ChatBox_Footer .icon-plane {
-        width: 40px; /* Mengurangi ukuran tombol pada layar kecil */
+        width: 5px; /* Mengurangi ukuran tombol pada layar kecil */
     }
     
     .WA_ChatBox_Footer .input {

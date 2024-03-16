@@ -209,22 +209,21 @@
 }
 
 .WA_ChatBox_Footer .icon-plane {
-    cursor: pointer;
-    width: 30px; /* Sesuaikan lebar tombol */
+    width: 100%; /* Ubah lebar tombol pesawat menjadi 100% */
+    max-width: 40px; /* Tetapkan lebar maksimum */
     height: auto; /* Biarkan tinggi tombol disesuaikan secara otomatis */
     margin-left: 5px; /* Mengurangi margin kiri */
 }
 
 .WA_ChatBox_Footer .input {
-    margin-right: 20px; /* Mengurangi margin kanan */
+    flex: 1; /* Gunakan flex untuk mengisi sisa ruang dengan input */
+    margin-right: 5px; /* Mengurangi margin kanan */
 }
 
 /* Aturan media query untuk layar yang lebih kecil */
-
-
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
     .WA_ChatBox_Footer .icon-plane {
-        width: 20px; /* Mengurangi ukuran tombol pada layar kecil */
+        max-width: 30px; /* Mengurangi ukuran tombol pada layar kecil */
     }
     
     .WA_ChatBox_Footer .input {

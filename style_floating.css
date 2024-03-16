@@ -222,10 +222,9 @@
 /* Aturan media query untuk layar yang lebih kecil */
 
 
-
 @media screen and (max-width: 360px) {
     .WA_ChatBox_Footer .icon-plane {
-        width: 15px; /* Mengurangi ukuran tombol pada layar kecil */
+        width: 5px; /* Mengurangi ukuran tombol pada layar kecil */
     }
     
     .WA_ChatBox_Footer .input {

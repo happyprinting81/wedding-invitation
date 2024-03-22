@@ -27,7 +27,7 @@
     top: 20px;
 }
 .WA_Chat_Widget[data-position^="bottom-"] .WA_FloatingButton{
-    bottom: 20px;
+    bottom: 80px;
 }
 .WA_Chat_Widget[data-position$="-left"] .WA_FloatingButton{
     left: 20px;
@@ -44,7 +44,7 @@
     top: 110px;
 }
 .WA_Chat_Widget[data-position^="bottom-"] .WA_ChatBox{
-    bottom: 110px;
+    bottom: 165px;
 }
 .WA_Chat_Widget[data-position$="-left"] .WA_ChatBox{
     left: 30px;
@@ -197,11 +197,6 @@
     border-radius: 10px;
 }
 
-
-
-
-
-
 .WA_ChatBox_Footer {
     display: flex;
     align-items: center;
@@ -230,6 +225,25 @@
         width: calc(100% - 40px); /* Mengatur ulang lebar input */
     }
 }
+
+/* Tambahkan animasi untuk tombol WhatsApp */
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan animasi ke tombol WhatsApp */
+.WA_Chat_Widget .WA_FloatingButton {
+    animation: floatAnimation 1.3s ease-in-out infinite; /* Ubah durasi dan efek animasi sesuai kebutuhan */
+}
+
 
 
 

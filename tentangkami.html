@@ -36,6 +36,35 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <style>
+      #scrollToTopBtn {
+          display: none;
+          position: fixed;
+          bottom: 23px;
+          right: 35px; /* Sedikit geser ke kiri */
+          z-index: 99;
+          background-color: #00C2FF; /* Warna latar belakang baru */
+          color: #fff;
+          border: none;
+          border-radius: 50%; /* Membuat tombol menjadi bulat */
+          width: 40px; /* Lebar tombol */
+          height: 40px; /* Tinggi tombol */
+          font-size: 16px; /* Ukuran teks */
+          line-height: 40px; /* Sesuaikan dengan tinggi tombol */
+          text-align: center; /* Tengahkan teks */
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Menambah bayangan untuk efek 3D */
+      }
+  
+      /* Icon panah ke atas */
+      
+  
+      #scrollToTopBtn:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan saat dihover */
+      }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
   
 
@@ -261,6 +290,8 @@
         </div>
       </section>
 
+      <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
     </article>
   </main>
 
@@ -332,7 +363,7 @@
         </li>
 
         <li>
-          <a href="#" class="footer-link">Home</a>
+          <a href="index.html" class="footer-link">Home</a>
         </li>
 
         <li>
@@ -503,6 +534,28 @@ document.addEventListener("DOMContentLoaded", function() {
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollToTopBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollToTopBtn").style.display = "none";
+    }
+}
+
 </script>
 
 </body>

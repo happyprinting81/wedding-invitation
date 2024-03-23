@@ -25,72 +25,124 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+
+ 
+
+
 
   <!-- 
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="style_floating.css">
+  <link href="path-to-lightbox2/lightbox.css" rel="stylesheet">
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <style>
-      #scrollToTopBtn {
-          display: none;
-          position: fixed;
-          bottom: 23px;
-          right: 35px; /* Sedikit geser ke kiri */
-          z-index: 99;
-          background-color: #00C2FF; /* Warna latar belakang baru */
-          color: #fff;
-          border: none;
-          border-radius: 50%; /* Membuat tombol menjadi bulat */
-          width: 40px; /* Lebar tombol */
-          height: 40px; /* Tinggi tombol */
-          font-size: 16px; /* Ukuran teks */
-          line-height: 40px; /* Sesuaikan dengan tinggi tombol */
-          text-align: center; /* Tengahkan teks */
-          cursor: pointer;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Menambah bayangan untuk efek 3D */
-      }
-  
-      /* Icon panah ke atas */
-      
-  
-      #scrollToTopBtn:hover {
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan saat dihover */
-      }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
   
 
+<style>
+  #scrollToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 23px;
+      right: 35px; /* Sedikit geser ke kiri */
+      z-index: 99;
+      background-color: #00C2FF; /* Warna latar belakang baru */
+      color: #fff;
+      border: none;
+      border-radius: 50%; /* Membuat tombol menjadi bulat */
+      width: 40px; /* Lebar tombol */
+      height: 40px; /* Tinggi tombol */
+      font-size: 16px; /* Ukuran teks */
+      line-height: 40px; /* Sesuaikan dengan tinggi tombol */
+      text-align: center; /* Tengahkan teks */
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Menambah bayangan untuk efek 3D */
+  }
+
+  /* Icon panah ke atas */
+  
+
+  #scrollToTopBtn:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan saat dihover */
+  }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-4.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-5.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-6.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-7.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-8.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-9.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-10.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-11.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-12.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slide-13.jpg">
+
+<style>
+    /* Accordion Styles */
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #e0e0e0;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #ffffff;
+  max-height: 200px; /* Atur tinggi maksimum konten yang ditampilkan */
+  overflow: auto; /* Tampilkan scroll jika konten melebihi tinggi maksimum */
+}
+
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-header {
+  position: relative; /* Menjadikan posisi relatif untuk ikon */
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Atur jarak dari kanan */
+  transform: translateY(-50%); /* Pusatkan vertikal */
+  transition: transform 0.3s ease; /* Animasi perubahan ikon */
+}
+
+.accordion-header.active .arrow-icon {
+  transform: translateY(-50%) rotate(180deg); /* Perubahan ikon ketika aktif (terbuka) */
+}
+</style>
+
+
+
 
 </head>
 
 <body>
   <audio id="background-music" loop>
     <source src="./assets/lagu.mp3" type="audio/mp3">
-     !! Browser anda tidak mendukung pemutaran audio
+    Your browser does not support the audio tag.
 </audio>
   <!-- 
     - #HEADER
@@ -102,15 +154,12 @@
       <a href="index.html" class="logo">
 
       
-        <img src="./assets/images/hp_putih.png" width="90" height="90" alt="HappyPrinting" class="logo-light" > 
+        <img src="./assets/images/hp_putih.png" width="90" height="90" alt="happyprinting" class="logo-light" > 
         
-        
-            
-         
-        
-
         <img src="./assets/images/hp_aqua.png" width="90" height="90" alt="happyprinting" class="logo-dark">
 
+       
+      
       </a>
 
       <nav class="navbar" data-navbar>
@@ -136,7 +185,7 @@
           </li>
 
           <li>
-            <a href="FAQ.html" class="navbar-link">FAQ</a>
+            <a href="#" class="navbar-link">FAQ</a>
           </li>
 
           <li>
@@ -146,18 +195,13 @@
           
 
         </ul>
-
-        
-
+        <ul class="social-list">
+        <div class="wrapper">
+          <h5>"Tinta cinta mencetak kisah kebahagiaan."</h5>
+        </div>
+</ul>
         <ul class="social-list">
 
-          <div class="wrapper">
-            <h5>"Tinta cinta mencetak kisah kebahagiaan."</h5>
-          </div>
-</ul>
-
-
-          <ul class="social-list">
           <li>
             <a href="https://www.instagram.com/happy_printing_/" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
@@ -169,6 +213,9 @@
               <ion-icon name="mail"></ion-icon>
             </a>
           </li>
+
+         
+
         </ul>
 
       </nav>
@@ -197,11 +244,18 @@
 
       <section class="section hero has-bg-image" aria-label="home"
         style="background-image: url('./assets/images/hero-bg.jpg')">
-        <h1 style="text-align: center; color: white;" class="h1 hero-title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">Tentang kami</h1><br>
-        <h2 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-          "Bersama HappyPrinting, di mana impian pernikahan 
-              Anda mencetak kisah kebahagiaan!
-        </h2>
+       
+
+          <h1 style="text-align: center; color: white;" class="h1 hero-title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">FAQ</h1><br>
+          <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
+            Punya Pertanyaan seputar Layanan Kami?
+          </h3><br>
+
+          <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
+            Kami dengan senang hati menghadirkan solusi 
+            lengkap untuk setiap pertanyaan yang sering diajukan oleh pelanggan kami. Jangan ragu untuk mulai 
+            menjelajahi informasi yang Anda cari di sini!
+          </h3>
       </section>
 
 
@@ -217,65 +271,94 @@
         - #PROJECT
       -->
 
-      <section class="section project" aria-labelledby="project-label">
+      <!-- FAQ Section -->
+      <section class="section faq" aria-labelledby="faq-label">
         <div class="container">
-            <p>
-              Kami adalah lebih dari sekedar percetakan, kami adalah kanvas di mana cinta dan 
-              kreativitas bersatu, dan undangan pernikahan Anda menjadi karya seni yang tak 
-              terlupakan. Di HappyPrinting, kami paham bahwa pernikahan adalah awal dari petualangan 
-              seumur hidup. Oleh karena itu, kami dengan penuh semangat menghadirkan undangan pernikahan yang 
-              bukan hanya selembar kertas, melainkan juga refleksi autentik dari cinta yang Anda bagi.
-            </p><br>
+          <div class="accordion">
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                Apa saja layanan yang ditawarkan oleh HappyPrinting?
+                <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
+              </button>
+              <div class="accordion-content">
+                <p>Kami menyediakan layanan percetakan khusus undangan pernikahan dengan 
+                    berbagai pilihan desain, kertas, dan finising yang dapat disesuaikan dengan kebutuhan Anda.</p>
+              </div>
+            </div>
 
-            <p>
-              Di balik setiap cetakan kami, tersembunyi upaya dan dedikasi untuk menghadirkan 
-              desain yang unik, personal, dan sesuai dengan impian Anda, mengubah inspirasi menjadi desain yang menakjubkan. 
-              Mulai dari gaya elegan hingga tema yang penuh warna, 
-              kami berjanji untuk menghadirkan undangan pernikahan yang memukau, sebagaimana cinta Anda.
-            </p><br>
 
-            <p>
-              Tidak hanya menawarkan desain yang menarik, HappyPrinting juga memprioritaskan 
-              kualitas cetakan. Teknologi canggih kami memastikan warna yang hidup, 
-              detail yang tajam, dan tampilan yang profesional. Kami memahami pentingnya 
-              setiap elemen dalam undangan, mulai dari font hingga tekstur kertas. Inilah 
-              mengapa kami tidak berhenti sebelum setiap cetakan mencerminkan standar 
-              ketepatan dan kesempurnaan yang tinggi.
-            </p><br>
+            
 
-            <p>
-              Kami mengerti bahwa perencanaan pernikahan bisa menjadi tugas yang menantang.
-              Oleh karena itu, kami ingin membuat pengalaman Anda dengan HappyPrinting 
-              sejauh mungkin dari stres. Dari pemesanan yang mudah hingga pengiriman 
-              yang tepat waktu, kami berusaha menghilangkan hambatan apa pun di perjalanan 
-              menuju undangan pernikahan impian Anda.
-            </p><br>
 
-            <p>
-              HappyPrinting bukan hanya tentang mencetak undangan; 
-              kami adalah mitra dalam perayaan cinta Anda. Kami bangga
-               dapat berkontribusi pada momen bahagia ini 
-               dengan membantu Anda menciptakan undangan yang tak 
-               hanya mengundang tamu, tetapi juga membangkitkan rasa 
-               antusiasme mereka untuk menyaksikan awal dari kisah cinta Anda.
-            </p><br>
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                Bagaimana cara melakukan pemesanan di HappyPrinting?
+                <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
+              </button>
+              <div class="accordion-content">
+                <p>Anda dapat melakukan pemesanan melalui kontak yang tertera dengan menghubungi layanan pelanggan kami melalui 
+                    Instagram atau  email. Kami juga menyediakan fitur chat Whatsapp untuk memudahkan proses pemesanan dan komunikasi dengan tim kami</p>
+              </div>
+            </div>
 
-            <p>
-              Mari bersama-sama kita cetak kebahagiaan, satu undangan pernikahan 
-              indah pada satu waktu. Selamat datang di HappyPrinting, 
-              di mana setiap cetakan adalah cerminan dari cinta yang 
-              tak tergantikan dan kebahagiaan yang mengalir tiada henti."
-            </p><br>
-          
-          
 
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+              <button class="accordion-header" onclick="toggleAccordion(this)">
+                Apakah HappyPrinting menyediakan layanan pengiriman atau pengantaran?
+                <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
+              </button>
+              <div class="accordion-content">
+                <p>Ya, kami menyediakan layanan pengiriman untuk pesanan Anda dengan opsi pengiriman reguler atau ekspres sesuai kebutuhan Anda. 
+                    Kami juga menyediakan free pengantaran khusus untuk wilayah dalam kota guna memenuhi kebutuhan pengiriman lokal.</p>
+              </div>
+            </div>
+
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Berapa lama estimasi pengerjaan untuk undangan pernikahan di HappyPrinting?
+                  <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
+                </button>
+                <div class="accordion-content">
+                  <p>Estimasi pengerjaan kami bervariasi tergantung pada jumlah dan kompleksitas pesanan, serta list
+                    dan jumlah pcs pesanan. Namun secara umum, waktu pengerjaan berkisar antara 4-10 hari kerja 
+                    setelah konfirmasi desain.</p>
+                </div>
+              </div>
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Apakah HappyPrinting memiliki berbagai model undangan pernikahan yang tersedia?
+                  <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
+                </button>
+                <div class="accordion-content">
+                  <p>Ya, kami memiliki 50+  model undangan pernikahan mulai dari tradisional hingga 
+                    modern yang dapat dipilih sesuai selera Anda.</p>
+                </div>
+              </div>
+
+
+              <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                  Bagaimana dengan jam operasional HappyPrinting?
+                  <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
+                </button>
+                <div class="accordion-content">
+                  <p>JAM OPERASIONAL</p>
+                  <p>Senin - sabtu     :    07.00 - 23.00 WIB</p>
+                  <p>Minggu            :    07.00 - 17.00 WIB</p>
+                </div>
+              </div>
+
+          </div>
         </div>
-
-        
       </section>
+    
+    
+  
 
 
-
+      
 
 
       <!-- 
@@ -303,7 +386,7 @@
 
 
 
-   <!-- 
+  <!-- 
     - #FOOTER
   -->
 
@@ -375,8 +458,8 @@
         </li>
 
         <li>
-          <a href="FAQ.html" class="footer-link">FAQ</a>
-        </li>
+            <a href="#" class="footer-link">FAQ</a>
+          </li>
 
         <li>
           <a href="tentangkami.html" class="footer-link">Tentang kami</a>
@@ -563,6 +646,41 @@ function scrollFunction() {
         document.getElementById("scrollToTopBtn").style.display = "none";
     }
 }
+
+</script>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const parent = header.parentElement;
+      const isActive = parent.classList.contains('active');
+
+      // Close all accordions
+      accordionHeaders.forEach(item => {
+        item.parentElement.classList.remove('active');
+      });
+
+      // Open the clicked accordion
+      if (!isActive) {
+        parent.classList.add('active');
+
+        // Scroll to show full content
+        const accordionContent = parent.querySelector('.accordion-content');
+        accordionContent.scrollTop = 0; // Scroll to top when opening
+      }
+    });
+  });
+});
+
+function toggleAccordion(button) {
+  button.classList.toggle('active'); // Tambahkan atau hapus kelas 'active' pada button
+  var arrowIcon = button.querySelector('.arrow-icon'); // Ambil elemen ikon panah
+  arrowIcon.classList.toggle('rotate'); // Tambahkan atau hapus kelas 'rotate' pada ikon panah
+}
+
 
 </script>
 

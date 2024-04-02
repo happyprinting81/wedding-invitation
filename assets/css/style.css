@@ -180,6 +180,11 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
+.copyright {
+  font-size: var(--fs-6);
+  text-align: center;
+}
+
 .social-link:is(:hover, :focus-visible) { transform: translateY(-3px); }
 
 .section { padding-block: var(--section-padding); }

@@ -248,10 +248,16 @@ body.nav-active { overflow: hidden; }
 }
 
 .section-subtitle {
-  font-size: var(--fs-7);
-  text-transform: uppercase;
-  color: var(--violet-blue-crayola);
+
   font-weight: var(--fw-700);
+
+}
+
+.section-subtitle1 {
+  font-size: var(--fs-40);
+  
+  color: var(--violet-blue-crayola);
+  font-weight: var(--fw-70);
   margin-block-end: 16px;
 }
 

@@ -1,807 +1,1070 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 
+    <!-- 
     - primary meta tags
   -->
-  <title>HappyPrinting | Spesialis Undangan Pernikahan</title>
-  <meta name="title" content="happyprinting">
-  <meta name="description" content="HappyPrinting, rumahnya kebahagiaan 
-  dalam setiap cetakan undangan pernikahan.">
+    <title>HappyPrinting | Spesialis Undangan Pernikahan</title>
+    <meta name="title" content="happyprinting" />
+    <meta
+      name="description"
+      content="HappyPrinting, rumahnya kebahagiaan 
+  dalam setiap cetakan undangan pernikahan."
+    />
 
-  <!-- 
+    <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/svg+xml">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon.png"
+      type="image/svg+xml"
+    />
 
-  <!-- 
+    <!-- 
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
 
-
- 
-
-
-
-  <!-- 
+    <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="style_floating.css">
-  <link href="path-to-lightbox2/lightbox.css" rel="stylesheet">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="style_floating.css" />
+    <link href="path-to-lightbox2/lightbox.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  
+    <style>
+      #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 23px;
+        right: 35px; /* Sedikit geser ke kiri */
+        z-index: 99;
+        background-color: #00c2ff; /* Warna latar belakang baru */
+        color: #fff;
+        border: none;
+        border-radius: 50%; /* Membuat tombol menjadi bulat */
+        width: 40px; /* Lebar tombol */
+        height: 40px; /* Tinggi tombol */
+        font-size: 16px; /* Ukuran teks */
+        line-height: 40px; /* Sesuaikan dengan tinggi tombol */
+        text-align: center; /* Tengahkan teks */
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Menambah bayangan untuk efek 3D */
+      }
+
+      /* Icon panah ke atas */
+
+      #scrollToTopBtn:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan saat dihover */
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      .accordion-header {
+            font-weight: 500; /* Menyesuaikan font weight */
+            font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+        }
+
+        .accordion-content p {
+            font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+        }
+
+
+      /* Accordion Styles */
+      .accordion {
+        margin-top: 20px;
+      }
+
+      .accordion-item {
+        margin-bottom: 10px;
+      }
+
+      .accordion-header {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        text-align: left;
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
+
+      .accordion-header:hover {
+        background-color: #e0e0e0;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 5px;
+        background-color: #ffffff;
+        max-height: 200px; /* Atur tinggi maksimum konten yang ditampilkan */
+        overflow: auto; /* Tampilkan scroll jika konten melebihi tinggi maksimum */
+      }
+
+      .accordion-item.active .accordion-content {
+        display: block;
+      }
+
+      .accordion-header {
+        position: relative; /* Menjadikan posisi relatif untuk ikon */
+      }
+
+      .arrow-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px; /* Atur jarak dari kanan */
+        transform: translateY(-50%); /* Pusatkan vertikal */
+        transition: transform 0.3s ease; /* Animasi perubahan ikon */
+      }
+
+      .accordion-header.active .arrow-icon {
+        transform: translateY(-50%) rotate(180deg); /* Perubahan ikon ketika aktif (terbuka) */
+      }
+    </style>
+
+    <style>
+      /* Overlay */
+      #loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 64, 67, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Pastikan overlay berada di atas konten lain */
+      }
+
+      .overlay-container {
+        gap: 20px; /* Atur jarak antara dua elemen */
+      }
+
+      .loader {
+        width: 40px;
+        aspect-ratio: 1;
+        --c: no-repeat linear-gradient(#ffffff 0 0);
+        background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+        animation: l6-1 2s infinite, l6-2 2s infinite;
+      }
+
+      @keyframes l6-1 {
+        0% {
+          background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0;
+        }
+        8.33% {
+          background-size: 100% 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0;
+        }
+        16.67% {
+          background-size: 100% 4px, 4px 50%, 0 4px, 4px 0, 0 4px, 4px 0;
+        }
+        25% {
+          background-size: 100% 4px, 4px 50%, 50% 4px, 4px 0, 0 4px, 4px 0;
+        }
+        33.33% {
+          background-size: 100% 4px, 4px 50%, 50% 4px, 4px 100%, 0 4px, 4px 0;
+        }
+        41.67% {
+          background-size: 100% 4px, 4px 50%, 50% 4px, 4px 100%, 50% 4px, 4px 0;
+        }
+        48%,
+        52% {
+          background-size: 100% 4px, 4px 50%, 50% 4px, 4px 100%, 50% 4px,
+            4px 50%;
+        }
+        58.33% {
+          background-size: 0 4px, 4px 50%, 50% 4px, 4px 100%, 50% 4px, 4px 50%;
+        }
+        66.67% {
+          background-size: 0 4px, 4px 0, 50% 4px, 4px 100%, 50% 4px, 4px 50%;
+        }
+        75% {
+          background-size: 0 4px, 4px 0, 0 4px, 4px 100%, 50% 4px, 4px 50%;
+        }
+        83.33% {
+          background-size: 0 4px, 4px 0, 0 4px, 4px 0, 50% 4px, 4px 50%;
+        }
+        91.67% {
+          background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 50%;
+        }
+        100% {
+          background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0;
+        }
+      }
+
+      @keyframes l6-2 {
+        0%,
+        49.9% {
+          background-position: 0 50%, right 0 bottom 20px, 100% 0, 50% 0,
+            right 20px bottom 0, 0 100%;
+        }
+        50%,
+        100% {
+          background-position: 100% 50%, 100% 0, left 20px top 0, 50% 100%,
+            0 100%, 0 20px;
+        }
+      }
+
+      .loader-text {
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 20px;
+        color: #ffffff;
+        display: inline-grid;
+      }
+
+      .loader-text:before,
+      .loader-text:after {
+        content: "HappyPrinting....";
+        grid-area: 1/1;
+        -webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+        animation: l11 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
+      }
+
+      .loader-text:after {
+        -webkit-mask-position: 1ch 50%;
+        --s: -1;
+      }
+
+      @keyframes l11 {
+        100% {
+          transform: translateY(calc(var(--s, 1) * 0.1%));
+        }
+      }
+    </style>
+
 
 <style>
-  #scrollToTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 23px;
-      right: 35px; /* Sedikit geser ke kiri */
-      z-index: 99;
-      background-color: #00C2FF; /* Warna latar belakang baru */
-      color: #fff;
-      border: none;
-      border-radius: 50%; /* Membuat tombol menjadi bulat */
-      width: 40px; /* Lebar tombol */
-      height: 40px; /* Tinggi tombol */
-      font-size: 16px; /* Ukuran teks */
-      line-height: 40px; /* Sesuaikan dengan tinggi tombol */
-      text-align: center; /* Tengahkan teks */
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Menambah bayangan untuk efek 3D */
-  }
-
-  /* Icon panah ke atas */
-  
-
-  #scrollToTopBtn:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Efek bayangan saat dihover */
-  }
-</style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-
-<style>
-    /* Accordion Styles */
-.accordion {
-  margin-top: 20px;
+ /* Gaya untuk membagi layar menjadi dua kolom */
+.faq-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
-.accordion-item {
-  margin-bottom: 10px;
+.faq-image {
+    width: 100%;
 }
 
+.faq-content {
+    width: 100%;
+    padding-left: 0; /* Hapus padding di samping kiri */
+}
+
+/* Gaya untuk accordion */
 .accordion-header {
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: none;
-  text-align: left;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-header:hover {
-  background-color: #e0e0e0;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 15px;
+    border: 2px solid #00C2FF;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Menambahkan ruang di antara setiap accordion */
 }
 
 .accordion-content {
-  display: none;
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 5px;
-  background-color: #ffffff;
-  max-height: 200px; /* Atur tinggi maksimum konten yang ditampilkan */
-  overflow: auto; /* Tampilkan scroll jika konten melebihi tinggi maksimum */
+    padding: 15px;
+    border: 2px solid #00C2FF;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 10px; /* Menambahkan ruang di antara setiap accordion */
 }
 
-
-.accordion-item.active .accordion-content {
-  display: block;
-}
-
-.accordion-header {
-  position: relative; /* Menjadikan posisi relatif untuk ikon */
+.accordion-header:hover {
+    background-color: #e0e0e0;
 }
 
 .arrow-icon {
-  position: absolute;
-  top: 50%;
-  right: 10px; /* Atur jarak dari kanan */
-  transform: translateY(-50%); /* Pusatkan vertikal */
-  transition: transform 0.3s ease; /* Animasi perubahan ikon */
+    color: #777;
 }
 
-.accordion-header.active .arrow-icon {
-  transform: translateY(-50%) rotate(180deg); /* Perubahan ikon ketika aktif (terbuka) */
+.accordion-item.active .accordion-header {
+    background-color: #ddd;
 }
+
+/* Media queries untuk tampilan responsif */
+@media (min-width: 768px) {
+    /* Saat lebar layar minimal 768px, atur tata letak menjadi dua kolom */
+    .faq-wrapper {
+        flex-direction: row;
+    }
+
+    .faq-image {
+        width: 40%; /* Kolom gambar mengambil 40% lebar */
+    }
+
+    .faq-content {
+        width: 60%; /* Kolom FAQ mengambil 60% lebar */
+        padding-left: 20px; /* Tambahkan padding di samping kiri */
+    }
+}
+
 </style>
+  </head>
 
-<style>
-  /* Overlay */
-  #loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(10, 64, 67, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Pastikan overlay berada di atas konten lain */
-  }
-
-  .overlay-container {
-    gap: 20px; /* Atur jarak antara dua elemen */
-  }
-
-  .loader {
-    width: 40px;
-    aspect-ratio: 1;
-    --c: no-repeat linear-gradient(#ffffff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
-    animation: 
-      l6-1 2s infinite,
-      l6-2 2s infinite;
-  }
-
-  @keyframes l6-1 {
-    0%     {background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0}
-    8.33%  {background-size: 100% 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0}
-    16.67% {background-size: 100% 4px, 4px 50%, 0 4px, 4px 0, 0 4px, 4px 0}
-    25%    {background-size: 100% 4px, 4px 50%, 50% 4px, 4px 0, 0 4px, 4px 0}
-    33.33% {background-size: 100% 4px, 4px 50%, 50% 4px, 4px 100%, 0 4px, 4px 0}
-    41.67% {background-size: 100% 4px, 4px 50%, 50% 4px, 4px 100%, 50% 4px, 4px 0}
-    48%, 52% {background-size: 100% 4px, 4px 50%, 50% 4px, 4px 100%, 50% 4px, 4px 50%}
-    58.33% {background-size: 0 4px, 4px 50%, 50% 4px, 4px 100%, 50% 4px, 4px 50%}
-    66.67% {background-size: 0 4px, 4px 0, 50% 4px, 4px 100%, 50% 4px, 4px 50%}
-    75%    {background-size: 0 4px, 4px 0, 0 4px, 4px 100%, 50% 4px, 4px 50%}
-    83.33% {background-size: 0 4px, 4px 0, 0 4px, 4px 0, 50% 4px, 4px 50%}
-    91.67% {background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 50%}
-    100%   {background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0}
-  }
-  
-  @keyframes l6-2 {
-    0%, 49.9% {background-position: 0 50%, right 0 bottom 20px, 100% 0, 50% 0, right 20px bottom 0, 0 100%}
-    50%, 100% {background-position: 100% 50%, 100% 0, left 20px top 0, 50% 100%, 0 100%, 0 20px}
-  }
-
-  .loader-text {
-    font-weight: bold;
-    font-family: monospace;
-    font-size: 20px;
-    color: #ffffff;
-    display: inline-grid;
-  }
-
-  .loader-text:before,
-  .loader-text:after {
-    content: "HappyPrinting....";
-    grid-area: 1/1;
-    -webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
-    animation: l11 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
-  }
-
-  .loader-text:after {
-    -webkit-mask-position: 1ch 50%;
-    --s: -1;
-  }
-
-  @keyframes l11 {
-    100% {transform: translateY(calc(var(--s, 1) * 0.1%));}
-  }
-</style>
-
-
-
-
-
-</head>
-
-<body>
-  <audio id="background-music" loop>
-    <source src="./assets/lagu.mp3" type="audio/mp3">
-    Your browser does not support the audio tag.
-</audio>
-  <!-- 
+  <body>
+    <audio id="background-music" loop>
+      <source src="./assets/lagu.mp3" type="audio/mp3" />
+      Your browser does not support the audio tag.
+    </audio>
+    <!-- 
     - #HEADER
   -->
 
-  <div id="loading-overlay" class="overlay-container">
-    <div class="loader"></div>
-    <div class="loader-text"></div> <!-- Loading baru -->
-</div>
-
-
-  
-
-  <header class="header animate__animated animate__fadeInDown" data-header>
-    <div class="container">
-
-      <a href="index.html" class="logo">
-
-      
-        <img src="./assets/images/hp_putih.png" width="90" height="90" alt="happyprinting" class="logo-light" > 
-        
-        <img src="./assets/images/hp_aqua.png" width="90" height="90" alt="happyprinting" class="logo-dark">
-
-       
-      
-      </a>
-
-      <nav class="navbar" data-navbar>
-
-        <div class="navbar-top">
-          <a href="index.html" class="logo">
-            <img src="./assets/images/hp_aqua.png" width="70" height="70" alt="happyprinting">
-          </a>
-
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
-
-        <ul class="navbar-list">
-
-          <li>
-            <a href="index.html" class="navbar-link">Home</a>
-          </li>
-
-          <li>
-            <a href="produk.html" class="navbar-link">Katalog produk</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link">FAQ</a>
-          </li>
-
-          <li>
-            <a href="tentangkami.html" class="navbar-link">Tentang kami</a>
-          </li>
-
-          
-
-        </ul>
-        <ul class="social-list">
-        <div class="wrapper">
-          <h5>"Tinta cinta mencetak kisah kebahagiaan."</h5>
-        </div>
-</ul>
-        <ul class="social-list">
-
-          <li>
-            <a href="https://www.instagram.com/happy_printing_/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="mailto:happyprinting81@gmail.com" class="social-link">
-              <ion-icon name="mail"></ion-icon>
-            </a>
-          </li>
-
-         
-
-        </ul>
-
-      </nav>
-
-      
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-      </button>
-
-      <div class="overlay" data-nav-toggler data-overlay></div>
-
+    <div id="loading-overlay" class="overlay-container">
+      <div class="loader"></div>
+      <div class="loader-text"></div>
+      <!-- Loading baru -->
     </div>
-  </header>
 
+    <header class="header animate__animated animate__fadeInDown" data-header>
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img
+            src="./assets/images/hp_putih.png"
+            width="90"
+            height="90"
+            alt="happyprinting"
+            class="logo-light"
+          />
 
+          <img
+            src="./assets/images/hp_aqua.png"
+            width="90"
+            height="90"
+            alt="happyprinting"
+            class="logo-dark"
+          />
+        </a>
 
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="index.html" class="logo">
+              <img
+                src="./assets/images/hp_aqua.png"
+                width="70"
+                height="70"
+                alt="happyprinting"
+              />
+            </a>
 
+            <button
+              class="nav-close-btn"
+              aria-label="close menu"
+              data-nav-toggler
+            >
+              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </div>
 
-  <main>
-    <article>
+          <ul class="navbar-list">
+            <li>
+              <a href="index.html" class="navbar-link">Beranda</a>
+            </li>
 
-      <!-- 
+            <li>
+              <a href="produk.html" class="navbar-link">Katalog produk</a>
+            </li>
+
+            <li>
+              <a href="#" class="navbar-link">FAQ</a>
+            </li>
+
+            <li>
+              <a href="tentangkami.html" class="navbar-link">Tentang kami</a>
+            </li>
+
+            <li>
+              <a href="info.html" class="navbar-link">Informasi</a>
+            </li>
+
+          </ul>
+          <ul class="social-list">
+            <div class="wrapper">
+              <h5>"Tinta cinta mencetak kisah kebahagiaan."</h5>
+            </div>
+          </ul>
+          <ul class="social-list">
+            <li>
+              <a
+                href="https://www.instagram.com/happy_printing_/"
+                class="social-link"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:happyprinting81@gmail.com" class="social-link">
+                <ion-icon name="mail"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="overlay" data-nav-toggler data-overlay></div>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
         - #HERO
       -->
 
-      <section class="section hero has-bg-image" aria-label="home"
-        style="background-image: url('./assets/images/hero-bg.jpg')">
-       
-
-          <h2 style="text-align: center; color: white;" class="h2 hero-title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">FAQ</h2><br>
-          <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
+        <section
+          class="section hero has-bg-image"
+          aria-label="home"
+          style="background-image: url('./assets/images/hero-bg.jpg')"
+        >
+          <h2
+            style="text-align: center; color: white"
+            class="h2 hero-title"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            FAQ
+          </h2>
+          <br />
+          <h3
+            style="text-align: center; color: white"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          >
             Punya Pertanyaan seputar Layanan Kami?
-          </h3><br>
-
-          <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-            Kami dengan senang hati menghadirkan solusi 
-            lengkap untuk setiap pertanyaan yang sering 
           </h3>
-          <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-            diajukan oleh pelanggan kami. Jangan ragu untuk mulai 
-            menjelajahi informasi yang Anda cari di sini!
+          <br />
+
+          <h3
+            style="text-align: center; color: white"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          >
+            Kami dengan senang hati menghadirkan solusi lengkap untuk setiap
+            pertanyaan yang sering
           </h3>
-      </section>
+          <h3
+            style="text-align: center; color: white"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          >
+            diajukan oleh pelanggan kami. Jangan ragu untuk mulai menjelajahi
+            informasi yang Anda cari di sini!
+          </h3>
+        </section>
 
-
-
-
-
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #PROJECT
       -->
 
-      <!-- FAQ Section -->
-      <section class="section faq" aria-labelledby="faq-label">
-        <div class="container">
-          <div class="accordion">
-            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                Apa saja layanan yang ditawarkan oleh HappyPrinting?
-                <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
-              </button>
-              <div class="accordion-content">
-                <p>Kami menyediakan layanan percetakan khusus undangan pernikahan dengan 
-                    berbagai pilihan desain, kertas, dan finising yang dapat disesuaikan dengan kebutuhan Anda.</p>
-              </div>
-            </div>
-
-
+        <!-- FAQ Section -->
+        <section class="section faq" aria-labelledby="faq-label">
+          <div class="container">
+              <div class="faq-wrapper">
+                  <div class="faq-image">
+                    <img src="./assets/images/faq.png" alt="FAQ Image" style="max-width: 100%; height: auto;">
+                  </div>
+                  <div class="faq-content">
+                      <div class="accordion">
+                          
+                          <div class="accordion-item"
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                              data-aos-delay="300"
+                          >
+                              <button
+                                  class="accordion-header"
+                                  onclick="toggleAccordion(this)"
+                              >
+                                  Apa saja layanan yang ditawarkan oleh HappyPrinting?
+                                  <span class="arrow-icon"
+                                      ><i class="fas fa-chevron-down"></i
+                                  ></span>
+                                  <!-- Down arrow -->
+                              </button>
+                              <div class="accordion-content">
+                                  <p>
+                                      Kami menyediakan layanan percetakan khusus undangan
+                                      pernikahan dengan berbagai pilihan desain, kertas, dan
+                                      finising yang dapat disesuaikan dengan kebutuhan Anda.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="accordion-item"
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                              data-aos-delay="300"
+                          >
+                              <button
+                                  class="accordion-header"
+                                  onclick="toggleAccordion(this)"
+                              >
+                              Bagaimana cara melakukan pemesanan di HappyPrinting?
+                                  <span class="arrow-icon"
+                                      ><i class="fas fa-chevron-down"></i
+                                  ></span>
+                                  <!-- Down arrow -->
+                              </button>
+                              <div class="accordion-content">
+                                  <p>
+                                    Anda dapat melakukan pemesanan melalui kontak yang tertera
+                                    dengan menghubungi layanan pelanggan kami melalui Instagram
+                                    atau email. Kami juga menyediakan fitur chat Whatsapp untuk
+                                    memudahkan proses pemesanan dan komunikasi dengan tim kami
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="accordion-item"
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                              data-aos-delay="300"
+                          >
+                              <button
+                                  class="accordion-header"
+                                  onclick="toggleAccordion(this)"
+                              >
+                              Apakah HappyPrinting menyediakan layanan pengiriman atau
+                              pengantaran?
+                                  <span class="arrow-icon"
+                                      ><i class="fas fa-chevron-down"></i
+                                  ></span>
+                                  <!-- Down arrow -->
+                              </button>
+                              <div class="accordion-content">
+                                  <p>
+                                    Ya, kami menyediakan layanan pengiriman untuk pesanan Anda
+                                    dengan opsi pengiriman reguler atau ekspres sesuai kebutuhan
+                                    Anda. Kami juga menyediakan free pengantaran khusus untuk
+                                    wilayah dalam kota guna memenuhi kebutuhan pengiriman lokal.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="accordion-item"
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                              data-aos-delay="300"
+                          >
+                              <button
+                                  class="accordion-header"
+                                  onclick="toggleAccordion(this)"
+                              >
+                              Berapa lama estimasi pengerjaan untuk undangan pernikahan di
+                              HappyPrinting?
+                                  <span class="arrow-icon"
+                                      ><i class="fas fa-chevron-down"></i
+                                  ></span>
+                                  <!-- Down arrow -->
+                              </button>
+                              <div class="accordion-content">
+                                  <p>
+                                    Estimasi pengerjaan kami bervariasi tergantung pada jumlah
+                                    dan kompleksitas pesanan, serta list dan jumlah pcs pesanan.
+                                    Namun secara umum, waktu pengerjaan berkisar antara 4-10
+                                    hari kerja setelah konfirmasi desain.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="accordion-item"
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                              data-aos-delay="300"
+                          >
+                              <button
+                                  class="accordion-header"
+                                  onclick="toggleAccordion(this)"
+                              >
+                              Apakah HappyPrinting memiliki berbagai model undangan
+                              pernikahan yang tersedia?
             
-
-
-            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                Bagaimana cara melakukan pemesanan di HappyPrinting?
-                <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
-              </button>
-              <div class="accordion-content">
-                <p>Anda dapat melakukan pemesanan melalui kontak yang tertera dengan menghubungi layanan pelanggan kami melalui 
-                    Instagram atau  email. Kami juga menyediakan fitur chat Whatsapp untuk memudahkan proses pemesanan dan komunikasi dengan tim kami</p>
-              </div>
-            </div>
-
-
-            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-              <button class="accordion-header" onclick="toggleAccordion(this)">
-                Apakah HappyPrinting menyediakan layanan pengiriman atau pengantaran?
-                <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
-              </button>
-              <div class="accordion-content">
-                <p>Ya, kami menyediakan layanan pengiriman untuk pesanan Anda dengan opsi pengiriman reguler atau ekspres sesuai kebutuhan Anda. 
-                    Kami juga menyediakan free pengantaran khusus untuk wilayah dalam kota guna memenuhi kebutuhan pengiriman lokal.</p>
-              </div>
-            </div>
-
-
-            <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    Berapa lama estimasi pengerjaan untuk undangan pernikahan di HappyPrinting?
-                  <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
-                </button>
-                <div class="accordion-content">
-                  <p>Estimasi pengerjaan kami bervariasi tergantung pada jumlah dan kompleksitas pesanan, serta list
-                    dan jumlah pcs pesanan. Namun secara umum, waktu pengerjaan berkisar antara 4-10 hari kerja 
-                    setelah konfirmasi desain.</p>
-                </div>
-              </div>
-
-              <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    Apakah HappyPrinting memiliki berbagai model undangan pernikahan yang tersedia?
-                  <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
-                </button>
-                <div class="accordion-content">
-                  <p>Ya, kami memiliki 50+  model undangan pernikahan mulai dari tradisional hingga 
-                    modern yang dapat dipilih sesuai selera Anda.</p>
-                </div>
-              </div>
-
-
-              <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                  Bagaimana dengan jam operasional HappyPrinting?
-                  <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span> <!-- Down arrow -->
-                </button>
-                <div class="accordion-content">
-                  <p>JAM OPERASIONAL</p>
-                  <p>Senin - sabtu     :    07.00 - 23.00 WIB</p>
-                  <p>Minggu            :    07.00 - 17.00 WIB</p>
-                </div>
-              </div>
-
-          </div>
-        </div>
-      </section>
-    
-    
-  
-
-
-      
-
-
-      <!-- 
-        - #CTA
-      -->
-
-      <section class="cta" aria-label="call to action">
-        <div class="container">
-
-          <marquee behavior="scroll" direction="left" scrollamount="9">
-            <h2 class="h2 section-title">!!! Untuk info/pemesanan lebih lanjut silahkan hubungi kontak yang tertera, Salam Happy</h2>
-          </marquee>
-
-          
-
-        </div>
-      </section>
-
-      <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
-
-    </article>
-  </main>
-
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
-  <footer class="footer" id="kontak">
-    <div class="container grid-list">
-
-      <div class="footer-brand">
-
-        <a href="#" class="logo">
-          <img src="./assets/images/hp_aqua.png" width="74" height="24" alt="happyprinting">
-          
-        </a>
-
-        <p class="footer-text">
-          &copy; 2024 HappyPrinting <br> All rights reserved.
-        </p>
-
-        <ul class="social-list">
-
-          <li>
-            <a href="https://www.instagram.com/happy_printing_/" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="mailto:happyprinting81@gmail.com" class="social-link">
-              <ion-icon name="mail"></ion-icon>
-            </a>
-          </li>
-        </ul>
-
-
-        <p class="footer-text" style="font-size: 14px;">
-          Senin - Sabtu : <br> 07.00 - 23.00 Wita
-        </p>
-
-        <p class="footer-text" style="font-size: 14px;">
-          Minggu : <br>07.00 - 17.00 Wita
-        </p>
-
-      </div>
-
-      <ul class="footer-list">
-
-        <li>
-          <p class="h3 footer-list-title" style="background: -webkit-linear-gradient(#14C5FB, #A5AED6 80%, #A5AED6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Informasi</p>
-        </li>
-        
-
-        <li>
-          <address class="footer-text">
-            Indonesia, Sulawesi-selatan, Kab. Soppeng
-          </address>
-        </li>
-
-        
-
-       
-
-      </ul>
-
-      <ul class="footer-list">
-
-        <li>
-          <p class="h3 footer-list-title"  style="background: -webkit-linear-gradient(#14C5FB, #A5AED6 80%, #A5AED6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Selengkapnya</p>
-        </li>
-
-        <li>
-          <a href="index.html" class="footer-link">Home</a>
-        </li>
-
-        <li>
-          <a href="produk.html" class="footer-link">Produk</a>
-        </li>
-
-        <li>
-            <a href="#" class="footer-link">FAQ</a>
-          </li>
-
-        <li>
-          <a href="tentangkami.html" class="footer-link">Tentang kami</a>
-        </li>
-      </ul>
-
-
-      <ul style="list-style: none; padding: 0;">
-        <li style="max-width: 100%; overflow: hidden; animation: floatAnimation 1.8s ease-in-out infinite alternate;">
-          <img src="./assets/images/payment.png" alt="HappyPrinting" width="350" height="350" style="border-radius: 10px; max-width: 100%;">
-        </li>
-      </ul>
-
-
-
-    </div> <br>
-
-
-
-    
-    <div class="WA_Chat_Widget" data-position="bottom-right">
-      <div class="WA_ChatBox">
-          <div class="WA_ChatBox_Header">
-              <div class="avatarBox">
-                  <img src="./assets/images/icon.png" alt="HappyPrinting" width="30" height="10">
-              </div>
-              <div class="infoBox">
-                  <h4 class="name">HappyPrinting</h4>
-                  <span class="answer_time">Spesialis undangan pernikahan</span>
-              </div>
-              <button class="WA_Close" onclick="hideChatbox()"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
-                      viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                      <path
-                          d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
-                  </svg></button>
-          </div>
-          <div class="WA_ChatBox_Body">
-              <div class="message">
-                  <h4 class="username">Admin HappyPrinting</h4>
-                  <div class="message_content">
-                      <p>Hai, Ada yang bisa kami bantu?</p>
+                                  <span class="arrow-icon"
+                                      ><i class="fas fa-chevron-down"></i
+                                  ></span>
+                                  <!-- Down arrow -->
+                              </button>
+                              <div class="accordion-content">
+                                  <p>
+                                    Ya, kami memiliki 50+ model undangan pernikahan mulai dari
+                                    tradisional hingga modern yang dapat dipilih sesuai selera
+                                    Anda.
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="accordion-item"
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                              data-aos-delay="300"
+                          >
+                              <button
+                                  class="accordion-header"
+                                  onclick="toggleAccordion(this)"
+                              >
+                              Bagaimana dengan jam operasional HappyPrinting?
+                                  <span class="arrow-icon"
+                                      ><i class="fas fa-chevron-down"></i
+                                  ></span>
+                                  <!-- Down arrow -->
+                              </button>
+                              <div class="accordion-content">
+                                  <p>
+                                    <p>JAM OPERASIONAL</p>
+                                    <p>Senin - sabtu : 07.00 - 23.00 WIB</p>
+                                    <p>Minggu : 07.00 - 17.00 WIB</p>
+                  
+                                  </p>
+                              </div>
+                          </div>
+                          <!-- Tambahkan item FAQ lainnya di sini -->
+                      </div>
                   </div>
               </div>
           </div>
-  
-        
-          <div class="WA_ChatBox_Footer">
-            <input id="pesan" class="input" placeholder="Ketik Pesan" style="margin-left: 9px; color: #000000;">
-            <button id="sendMessageButton" class="send-button" onclick="sendMessage()" disabled style="pointer-events: none;">
-                <img src="./assets/images/kirimm.png" class="icon-plane" alt="Kirim" style="width: 40px; height: auto;">
-            </button>
+      </section>
+
+        <!-- 
+        - #CTA
+      -->
+
+        <section class="cta" aria-label="call to action">
+          <div class="container">
+            <marquee behavior="scroll" direction="left" scrollamount="9">
+              <h2 class="h2 section-title">
+                !!! Untuk info/pemesanan lebih lanjut silahkan hubungi kontak
+                yang tertera, Salam Happy
+              </h2>
+            </marquee>
+          </div>
+        </section>
+
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </article>
+    </main>
+
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer" id="kontak">
+      <div class="container grid-list">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img
+              src="./assets/images/hp_aqua.png"
+              width="74"
+              height="24"
+              alt="happyprinting"
+            />
+          </a>
+
+          <p class="footer-text">
+            &copy; 2024 HappyPrinting <br />
+            All rights reserved.
+          </p>
+
+          <ul class="social-list">
+            <li>
+              <a
+                href="https://www.instagram.com/happy_printing_/"
+                class="social-link"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:happyprinting81@gmail.com" class="social-link">
+                <ion-icon name="mail"></ion-icon>
+              </a>
+            </li>
+          </ul>
+
+          <p class="footer-text" style="font-size: 14px">
+            Senin - Sabtu : <br />
+            07.00 - 23.00 Wita
+          </p>
+
+          <p class="footer-text" style="font-size: 14px">
+            Minggu : <br />07.00 - 17.00 Wita
+          </p>
         </div>
-        
-        
-        
-      
-        
+
+        <ul class="footer-list">
+          <li>
+            <p
+              class="h3 footer-list-title"
+              style="
+                background: -webkit-linear-gradient(
+                  #14c5fb,
+                  #a5aed6 80%,
+                  #a5aed6
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+            >
+              Informasi
+            </p>
+          </li>
+
+          <li>
+            <address class="footer-text">
+              Indonesia, Sulawesi-selatan, Kab. Soppeng
+            </address>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p
+              class="h3 footer-list-title"
+              style="
+                background: -webkit-linear-gradient(
+                  #14c5fb,
+                  #a5aed6 80%,
+                  #a5aed6
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+            >
+              Selengkapnya
+            </p>
+          </li>
+
+          <li>
+            <a href="index.html" class="footer-link">Beranda</a>
+          </li>
+
+          <li>
+            <a href="produk.html" class="footer-link">Katalog Produk</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ</a>
+          </li>
+
+          <li>
+            <a href="tentangkami.html" class="footer-link">Tentang kami</a>
+          </li>
+
+          <li>
+            <a href="info.html" class="footer-link">Informasi</a>
+          </li>
+        </ul>
+
+        <ul style="list-style: none; padding: 0">
+          <li
+            style="
+              max-width: 100%;
+              overflow: hidden;
+              animation: floatAnimation 1.8s ease-in-out infinite alternate;
+            "
+          >
+            <img
+              src="./assets/images/payment.png"
+              alt="HappyPrinting"
+              width="350"
+              height="350"
+              style="border-radius: 10px; max-width: 100%"
+            />
+          </li>
+        </ul>
+      </div>
+      <br />
+
+      <div class="WA_Chat_Widget" data-position="bottom-right">
+        <div class="WA_ChatBox">
+          <div class="WA_ChatBox_Header">
+            <div class="avatarBox">
+              <img
+                src="./assets/images/icon.png"
+                alt="HappyPrinting"
+                width="30"
+                height="10"
+              />
+            </div>
+            <div class="infoBox">
+              <h4 class="name">HappyPrinting</h4>
+              <span class="answer_time">Spesialis undangan pernikahan</span>
+            </div>
+            <button class="WA_Close" onclick="hideChatbox()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 512 512"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="WA_ChatBox_Body">
+            <div class="message">
+              <h4 class="username">Admin HappyPrinting</h4>
+              <div class="message_content">
+                <p>Hai, Ada yang bisa kami bantu?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="WA_ChatBox_Footer">
+            <input
+              id="pesan"
+              class="input"
+              placeholder="Ketik Pesan"
+              style="margin-left: 9px; color: #000000"
+            />
+            <button
+              id="sendMessageButton"
+              class="send-button"
+              onclick="sendMessage()"
+              disabled
+              style="pointer-events: none"
+            >
+              <img
+                src="./assets/images/kirimm.png"
+                class="icon-plane"
+                alt="Kirim"
+                style="width: 40px; height: auto"
+              />
+            </button>
+          </div>
+
           <script>
+            document
+              .getElementById("pesan")
+              .addEventListener("input", function () {
+                var inputField = document.getElementById("pesan");
+                var sendButton = document.getElementById("sendMessageButton");
 
-
-document.getElementById("pesan").addEventListener("input", function() {
-    var inputField = document.getElementById("pesan");
-    var sendButton = document.getElementById("sendMessageButton");
-
-    if (inputField.value.trim() !== "") {
-        sendButton.disabled = false;
-        sendButton.style.pointerEvents = "auto";
-    } else {
-        sendButton.disabled = true;
-        sendButton.style.pointerEvents = "none";
-    }
-});
-
-
+                if (inputField.value.trim() !== "") {
+                  sendButton.disabled = false;
+                  sendButton.style.pointerEvents = "auto";
+                } else {
+                  sendButton.disabled = true;
+                  sendButton.style.pointerEvents = "none";
+                }
+              });
 
             function sendMessage() {
-    var message = document.getElementById('pesan').value;
-    var phone = '6285280400417'; // Ganti dengan nomor WhatsApp yang dituju, sertakan kode negara tanpa tanda plus (+)
+              var message = document.getElementById("pesan").value;
+              var phone = "6285280400417"; // Ganti dengan nomor WhatsApp yang dituju, sertakan kode negara tanpa tanda plus (+)
 
-    // Membuka WhatsApp dengan pesan yang sudah ditulis
-    window.open('https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message), '_blank');
-}
-
+              // Membuka WhatsApp dengan pesan yang sudah ditulis
+              window.open(
+                "https://api.whatsapp.com/send?phone=" +
+                  phone +
+                  "&text=" +
+                  encodeURIComponent(message),
+                "_blank"
+              );
+            }
           </script>
-          
-      </div>
+        </div>
 
-
-      <div class="WA_FloatingButton" onclick="toggleChatbox()">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#4FCE5D" viewBox="0 0 90 90">
-              <path
-                  d="M90 43.841c0 24.213-19.779 43.841-44.182 43.841a44.256 44.256 0 01-21.357-5.455L0 90l7.975-23.522a43.38 43.38 0 01-6.34-22.637C1.635 19.628 21.416 0 45.818 0 70.223 0 90 19.628 90 43.841zM45.818 6.982c-20.484 0-37.146 16.535-37.146 36.859 0 8.065 2.629 15.534 7.076 21.61L11.107 79.14l14.275-4.537A37.122 37.122 0 0045.819 80.7c20.481 0 37.146-16.533 37.146-36.857S66.301 6.982 45.818 6.982zm22.311 46.956c-.273-.447-.994-.717-2.076-1.254-1.084-.537-6.41-3.138-7.4-3.495-.993-.358-1.717-.538-2.438.537-.721 1.076-2.797 3.495-3.43 4.212-.632.719-1.263.809-2.347.271-1.082-.537-4.571-1.673-8.708-5.333-3.219-2.848-5.393-6.364-6.025-7.441-.631-1.075-.066-1.656.475-2.191.488-.482 1.084-1.255 1.625-1.882.543-.628.723-1.075 1.082-1.793.363-.717.182-1.344-.09-1.883-.27-.537-2.438-5.825-3.34-7.977-.902-2.15-1.803-1.792-2.436-1.792-.631 0-1.354-.09-2.076-.09s-1.896.269-2.889 1.344c-.992 1.076-3.789 3.676-3.789 8.963 0 5.288 3.879 10.397 4.422 11.113.541.716 7.49 11.92 18.5 16.223C58.2 65.771 58.2 64.336 60.186 64.156c1.984-.179 6.406-2.599 7.312-5.107.9-2.512.9-4.663.631-5.111z">
-              </path>
+        <div class="WA_FloatingButton" onclick="toggleChatbox()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#4FCE5D"
+            viewBox="0 0 90 90"
+          >
+            <path
+              d="M90 43.841c0 24.213-19.779 43.841-44.182 43.841a44.256 44.256 0 01-21.357-5.455L0 90l7.975-23.522a43.38 43.38 0 01-6.34-22.637C1.635 19.628 21.416 0 45.818 0 70.223 0 90 19.628 90 43.841zM45.818 6.982c-20.484 0-37.146 16.535-37.146 36.859 0 8.065 2.629 15.534 7.076 21.61L11.107 79.14l14.275-4.537A37.122 37.122 0 0045.819 80.7c20.481 0 37.146-16.533 37.146-36.857S66.301 6.982 45.818 6.982zm22.311 46.956c-.273-.447-.994-.717-2.076-1.254-1.084-.537-6.41-3.138-7.4-3.495-.993-.358-1.717-.538-2.438.537-.721 1.076-2.797 3.495-3.43 4.212-.632.719-1.263.809-2.347.271-1.082-.537-4.571-1.673-8.708-5.333-3.219-2.848-5.393-6.364-6.025-7.441-.631-1.075-.066-1.656.475-2.191.488-.482 1.084-1.255 1.625-1.882.543-.628.723-1.075 1.082-1.793.363-.717.182-1.344-.09-1.883-.27-.537-2.438-5.825-3.34-7.977-.902-2.15-1.803-1.792-2.436-1.792-.631 0-1.354-.09-2.076-.09s-1.896.269-2.889 1.344c-.992 1.076-3.789 3.676-3.789 8.963 0 5.288 3.879 10.397 4.422 11.113.541.716 7.49 11.92 18.5 16.223C58.2 65.771 58.2 64.336 60.186 64.156c1.984-.179 6.406-2.599 7.312-5.107.9-2.512.9-4.663.631-5.111z"
+            ></path>
           </svg>
+        </div>
       </div>
-  </div>
 
-  <div class="copyright" style="margin-bottom: -80px; font-size: 14px; text-align: center;">
-    Spesialis undangan pernikahan | Tinta cinta mencetak kisah kebahagiaan
-  </div>
-    
-  </footer>
+      <div
+        class="copyright"
+        style="margin-bottom: -80px; font-size: 14px; text-align: center"
+      >
+        Spesialis undangan pernikahan | Tinta cinta mencetak kisah kebahagiaan
+      </div>
+    </footer>
 
-  <!-- 
+    <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
- 
- 
- <script>
-    const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slider-item');
+    <script src="./assets/js/script.js"></script>
 
-let currentIndex = 0;
-const intervalTime = 2000; // Ganti slide setiap 1 detik
+    <script>
+      const slider = document.querySelector(".slider");
+      const slides = document.querySelectorAll(".slider-item");
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    const offset = -currentIndex * slider.clientWidth; // Gunakan clientWidth untuk mendapatkan lebar yang akurat
-    slider.style.transform = `translateX(${offset}px)`;
-}
+      let currentIndex = 0;
+      const intervalTime = 2000; // Ganti slide setiap 1 detik
 
-setInterval(nextSlide, intervalTime);
-  </script>
-  
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        const offset = -currentIndex * slider.clientWidth; // Gunakan clientWidth untuk mendapatkan lebar yang akurat
+        slider.style.transform = `translateX(${offset}px)`;
+      }
 
-  <script>
-    let isChatboxVisible = false;
-    const chatbox = document.querySelector(".WA_Chat_Widget .WA_ChatBox");
-    function hideChatbox() {
+      setInterval(nextSlide, intervalTime);
+    </script>
+
+    <script>
+      let isChatboxVisible = false;
+      const chatbox = document.querySelector(".WA_Chat_Widget .WA_ChatBox");
+      function hideChatbox() {
         isChatboxVisible = false;
         chatbox.style.display = "none";
-    }
+      }
 
-    function toggleChatbox() {
+      function toggleChatbox() {
         isChatboxVisible = !isChatboxVisible;
         chatbox.style.display = isChatboxVisible ? "block" : "none";
-    }
+      }
+    </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var audio = document.getElementById("background-music");
 
-</script>
-
-
-
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var audio = document.getElementById("background-music");
-
-    // Function to play audio
-    function playAudio() {
-        if (audio.paused) {
+        // Function to play audio
+        function playAudio() {
+          if (audio.paused) {
             audio.play();
+          }
         }
-    }
 
-    // Add event listener to start audio after user interaction
-    document.body.addEventListener("click", function() {
-        playAudio();
-        // Remove the event listener after first interaction
-        document.body.removeEventListener("click", arguments.callee);
-    });
-});
-</script>
-  <!-- 
+        // Add event listener to start audio after user interaction
+        document.body.addEventListener("click", function () {
+          playAudio();
+          // Remove the event listener after first interaction
+          document.body.removeEventListener("click", arguments.callee);
+        });
+      });
+    </script>
+    <!-- 
     - ionicon
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-<script>
-  function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
 
-window.onscroll = function() {
-    scrollFunction();
-};
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("scrollToTopBtn").style.display = "block";
-    } else {
-        document.getElementById("scrollToTopBtn").style.display = "none";
-    }
-}
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollToTopBtn").style.display = "block";
+        } else {
+          document.getElementById("scrollToTopBtn").style.display = "none";
+        }
+      }
+    </script>
 
-</script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionHeaders = document.querySelectorAll(".accordion-header");
 
-<script>
-   document.addEventListener('DOMContentLoaded', function () {
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach((header) => {
+          header.addEventListener("click", () => {
+            const parent = header.parentElement;
+            const isActive = parent.classList.contains("active");
 
-  accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const parent = header.parentElement;
-      const isActive = parent.classList.contains('active');
+            // Close all accordions
+            accordionHeaders.forEach((item) => {
+              item.parentElement.classList.remove("active");
+            });
 
-      // Close all accordions
-      accordionHeaders.forEach(item => {
-        item.parentElement.classList.remove('active');
+            // Open the clicked accordion
+            if (!isActive) {
+              parent.classList.add("active");
+
+              // Scroll to show full content
+              const accordionContent =
+                parent.querySelector(".accordion-content");
+              accordionContent.scrollTop = 0; // Scroll to top when opening
+            }
+          });
+        });
       });
 
-      // Open the clicked accordion
-      if (!isActive) {
-        parent.classList.add('active');
-
-        // Scroll to show full content
-        const accordionContent = parent.querySelector('.accordion-content');
-        accordionContent.scrollTop = 0; // Scroll to top when opening
+      function toggleAccordion(button) {
+        button.classList.toggle("active"); // Tambahkan atau hapus kelas 'active' pada button
+        var arrowIcon = button.querySelector(".arrow-icon"); // Ambil elemen ikon panah
+        arrowIcon.classList.toggle("rotate"); // Tambahkan atau hapus kelas 'rotate' pada ikon panah
       }
-    });
-  });
-});
+    </script>
 
-function toggleAccordion(button) {
-  button.classList.toggle('active'); // Tambahkan atau hapus kelas 'active' pada button
-  var arrowIcon = button.querySelector('.arrow-icon'); // Ambil elemen ikon panah
-  arrowIcon.classList.toggle('rotate'); // Tambahkan atau hapus kelas 'rotate' pada ikon panah
-}
-
-
-</script>
-
-<script>
-  // Mengatur overlay loading agar hilang setelah beberapa detik
-  window.addEventListener("load", function() {
-    var overlay = document.getElementById('loading-overlay');
-    setTimeout(function() {
-      overlay.style.display = 'none';
-    }, 3000); // Ubah angka 2000 menjadi jumlah milidetik yang kamu inginkan, misalnya 2000 untuk 2 detik
-  });
-</script>
-
-
-
-
-
-</body>
-
+    <script>
+      // Mengatur overlay loading agar hilang setelah beberapa detik
+      window.addEventListener("load", function () {
+        var overlay = document.getElementById("loading-overlay");
+        setTimeout(function () {
+          overlay.style.display = "none";
+        }, 3000); // Ubah angka 2000 menjadi jumlah milidetik yang kamu inginkan, misalnya 2000 untuk 2 detik
+      });
+    </script>
+  </body>
 </html>

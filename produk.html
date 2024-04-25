@@ -226,11 +226,11 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="index.html" class="navbar-link">Home</a>
+            <a href="index.html" class="navbar-link">Beranda</a>
           </li>
 
           <li>
-            <a href="produk.html" class="navbar-link">Katalog produk</a>
+            <a href="#" class="navbar-link">Katalog produk</a>
           </li>
 
           <li>
@@ -239,6 +239,10 @@
 
           <li>
             <a href="tentangkami.html" class="navbar-link">Tentang kami</a>
+          </li>
+
+          <li>
+            <a href="info.html" class="navbar-link">Informasi</a>
           </li>
 
           
@@ -311,7 +315,7 @@
 
 
 
-
+      
 
 
       <!-- 
@@ -319,8 +323,17 @@
       -->
 
       <section class="section project" aria-labelledby="project-label">
+        
         <div class="container">
+          <div id="filter-buttons">
+            <button style="display: inline-block; margin-right: 10px; padding: 5px 20px; border-radius: 15px; border: 2px solid #007bff; color: #007bff; background-color: transparent; transition: background-color 0.3s, color 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';" onclick="filterSelection('all')">Semua</button>
+            <button style="display: inline-block; margin-right: 10px; padding: 5px 20px; border-radius: 15px; border: 2px solid #007bff; color: #007bff; background-color: transparent; transition: background-color 0.3s, color 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';" onclick="filterSelection('bc')">BC</button>
+            <button style="display: inline-block; padding: 5px 20px; border-radius: 15px; border: 2px solid #007bff; color: #007bff; background-color: transparent; transition: background-color 0.3s, color 0.3s; cursor: pointer;" onmouseover="this.style.backgroundColor='#007bff'; this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#007bff';" onclick="filterSelection('kraft')">Kraft</button>
+          </div><br>
+
+
           <ul class="grid-list" >
+
 
             <li>
               <div class="project-card" style="position: relative;">
@@ -532,6 +545,11 @@
 
               </div>
             </li>
+
+
+
+
+            
             <li>
               <div class="project-card" style="position: relative;">
 
@@ -3539,11 +3557,11 @@
         </li>
 
         <li>
-          <a href="index.html" class="footer-link">Home</a>
+          <a href="index.html" class="footer-link">Beranda</a>
         </li>
 
         <li>
-          <a href="produk.html" class="footer-link">Produk</a>
+          <a href="produk.html" class="footer-link">Katalog Produk</a>
         </li>
 
         <li>
@@ -3552,6 +3570,10 @@
 
         <li>
           <a href="tentangkami.html" class="footer-link">Tentang kami</a>
+        </li>
+
+        <li>
+          <a href="info.html" class="footer-link">Informasi</a>
         </li>
       </ul>
 
@@ -3754,6 +3776,37 @@ function scrollFunction() {
       overlay.style.display = 'none';
     }, 3000); // Ubah angka 2000 menjadi jumlah milidetik yang kamu inginkan, misalnya 2000 untuk 2 detik
   });
+</script>
+
+
+<script>
+function filterSelection(c) {
+  var x, i;
+  x = document.querySelectorAll(".project-card");
+
+  if (c == "all") {
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "block";
+    }
+  } else {
+    var visibleCount = 0;
+    for (i = 0; i < x.length; i++) {
+      var classNames = x[i].className.split(' ');
+      if (classNames.includes(c)) {
+        x[i].style.display = "block";
+        // Memeriksa apakah elemen saat ini tampil
+        if (visibleCount !== i) {
+          // Jika tidak, maka posisi elemen saat ini harus diubah
+          x[visibleCount].parentNode.insertBefore(x[i], x[visibleCount]);
+        }
+        visibleCount++;
+      } else {
+        x[i].style.display = "none";
+      }
+    }
+  }
+}
+
 </script>
 
 </body>

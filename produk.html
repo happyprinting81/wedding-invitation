@@ -298,25 +298,67 @@
       -->
 
       <section class="section hero has-bg-image" aria-label="home"
-        style="background-image: url('./assets/images/hero-bg.jpg')">
-       
-
-          <h2 style="text-align: center; color: white;" class="h2 hero-title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">Jelajahi Produk Terbaik Kami</h2><br>
-          <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-            Beragam model katalog dan bonus undangan animasi digital ditawarkan
-          </h3>
-          <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1000">
-            yang akan memberikan pengalaman istimewa pada pernikahan Anda !
-          </h3>
-          
-      </section>
-
-
+      style="background-image: url('./assets/images/hero-bg.jpg');">
+      <h2 style="text-align: center; color: white;" class="h2 hero-title" data-aos="fade-down" data-aos-duration="1000"
+          data-aos-delay="500">Jelajahi Produk Terbaik Kami</h2><br>
+      <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000"
+          data-aos-delay="1000">
+          Beragam model katalog dan bonus undangan animasi digital ditawarkan
+      </h3>
+      <h3 style="text-align: center; color: white;" data-aos="fade-down" data-aos-duration="1000"
+          data-aos-delay="1000">
+          yang akan memberikan pengalaman istimewa pada pernikahan Anda !
+      </h3>
+  </section>
 
 
 
 
+  <style>
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px; /* Jarak antara tombol dan konten di bawahnya */
+        flex-wrap: wrap; /* Tombol akan melipat baris saat tidak cukup ruang */
+    }
 
+
+    .control {
+        background-color: #00C2FF;
+        border-radius: 50px;
+        border: none;
+        padding: 8px 16px; /* Ukuran padding yang lebih kecil untuk perangkat seluler */
+        color: white;
+        cursor: pointer;
+        margin: 5px; /* Jarak antara tombol-tombol */
+        transition: background-color 0.3s ease; /* Efek transisi saat mengubah warna latar belakang */
+    }
+
+    .control:hover {
+        background-color: #A2AED7; /* Warna latar belakang saat dihover */
+    }
+
+    .control:active {
+        background-color: #A2AED7; /* Warna latar belakang saat diklik */
+    }
+
+    .activee {
+        background-color: #A2AED7 !important; /* Warna latar belakang saat tombol aktif dipilih */
+    }
+
+    @media screen and (max-width: 768px) {
+        .control {
+            padding: 6px 12px; /* Ukuran padding yang lebih kecil untuk perangkat seluler */
+            font-size: 14px; /* Ukuran font yang lebih kecil untuk perangkat seluler */
+        }
+    }
+</style>
+  
+
+
+
+    
+      
       
 
 
@@ -327,10 +369,19 @@
       <section class="section project" aria-labelledby="project-label">
         
         <div class="container">
-    
-          <ul class="grid-list">
 
-            <li>
+          <div class="button-container">
+            <button class="control" data-filter="all">Semua</button>
+            <button class="control" data-filter=".bc">BC (brief card)</button>
+            <button class="control" data-filter=".kraft">Kraft</button>
+            <button class="control" data-filter=".hot">Hotprint</button>
+            <button class="control" data-filter=".gold">Emboss Gold</button>
+            <button class="control" data-filter=".silver">Emboss Silver</button>
+        </div>
+    
+          <ul class="grid-list" data-mixitup>
+
+            <li class="mix bc">
               <div class="project-card"  style="position: relative;"      >
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
                   <a data-fancybox="gallery" href="./assets/images/HP.01 ISI DALAM.jpg" data-caption=" HP. 01 Isi (dalam)">
@@ -390,7 +441,7 @@
             
          
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"      >
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
                   <a data-fancybox="gallery" href="./assets/images/HP.02 ISI DALAM.jpg" data-caption=" HP. 02 Isi (dalam)">
@@ -450,7 +501,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -508,7 +559,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -565,7 +616,7 @@
 
 
 
-            <li>
+            <li class="mix bc hot">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -621,7 +672,7 @@
               </div>
             </li>
 
-            <li>
+            <li class="mix bc hot">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -674,7 +725,7 @@
 
 
 
-            <li>
+            <li class="mix bc hot">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -729,9 +780,8 @@
             </li>
 
 
-
-
-            <li>
+            
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -790,7 +840,7 @@
 
 
 
-            <li>
+            <li class="mix bc kraft">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -854,7 +904,7 @@
 
 
 
-            <li>
+            <li class="mix bc kraft">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -913,7 +963,7 @@
 
 
 
-            <li>
+            <li class="mix bc gold">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -973,7 +1023,7 @@
 
 
       
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1032,7 +1082,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1091,7 +1141,7 @@
 
 
 
-            <li>
+            <li class="mix bc gold">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1152,7 +1202,7 @@
 
 
 
-            <li>
+            <li class="mix bc gold">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1211,7 +1261,7 @@
 
 
 
-            <li>
+            <li class="mix bc silver">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1272,7 +1322,7 @@
 
 
 
-            <li>
+            <li class="mix bc silver">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1333,7 +1383,7 @@
 
 
 
-            <li>
+            <li class="mix bc silver">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1394,7 +1444,7 @@
 
 
 
-            <li>
+            <li class="mix bc hot">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1458,7 +1508,7 @@
 
 
 
-            <li>
+            <li class="mix bc hot">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1517,7 +1567,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1576,7 +1626,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1635,7 +1685,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1694,7 +1744,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1753,7 +1803,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1812,7 +1862,7 @@
 
 
 
-            <li>
+            <li class="mix bc">
               <div class="project-card" style="position: relative;"   >
 
                 <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
@@ -1869,9 +1919,6 @@
             </li>
 
 
-
-
-            
 
 
 
@@ -2203,10 +2250,24 @@ function scrollFunction() {
 </script>
 
 
+<!-- Tambahkan pustaka MixItUp -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
 
 
+<script>
+  var mixer = mixitup('.grid-list');
+</script>
 
-
+<script>
+  // Menambahkan event listener untuk menandai tombol kategori yang aktif
+  const controls = document.querySelectorAll('.control');
+  controls.forEach(control => {
+      control.addEventListener('click', function() {
+          controls.forEach(c => c.classList.remove('activee')); // Menghapus kelas 'active' dari semua tombol
+          this.classList.add('activee'); // Menambahkan kelas 'active' pada tombol yang dipilih
+      });
+  });
+</script>
 
 </body>
 

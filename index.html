@@ -234,7 +234,15 @@
     gap: 20px; /* Atur jarak antara dua elemen */
   }
 
- 
+  .loader {
+      width: 40px;
+      aspect-ratio: 1;
+      --c: no-repeat linear-gradient(#ffffff 0 0);
+      background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c);
+      animation: 
+        l6-1 2s infinite,
+        l6-2 2s infinite;
+    }
 
   @keyframes l6-1 {
     0%     {background-size: 0 4px, 4px 0, 0 4px, 4px 0, 0 4px, 4px 0}
@@ -258,7 +266,26 @@
   }
 
 
+  .loader-text {
+      font-weight: bold;
+      font-family: monospace;
+      font-size: 20px;
+      color: #ffffff;
+      display: inline-grid;
+    }
   
+    .loader-text:before,
+    .loader-text:after {
+      content: "HappyPrinting....";
+      grid-area: 1/1;
+      -webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+      animation: l11 1s infinite cubic-bezier(0.5, 220, 0.5, -220);
+    }
+  
+    .loader-text:after {
+      -webkit-mask-position: 1ch 50%;
+      --s: -1;
+    }
 
  
 
@@ -564,7 +591,10 @@
 
 
 
-
+<div id="loading-overlay" class="overlay-container">
+  <div class="loader"></div>
+  <div class="loader-text"></div> <!-- Loading baru -->
+</div>
 
 
   <!-- 
